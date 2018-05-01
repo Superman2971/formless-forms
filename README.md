@@ -1,27 +1,40 @@
-# FormlessForms
+# Formless-Forms
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
+> Angular component library for dynamic form creation with validation with the need of template forms.
 
-## Development server
+[![npm](https://img.shields.io/npm/v/formless-forms.svg?style=flat-square)](https://www.npmjs.com/package/formless-forms)
+[![npm License](https://img.shields.io/npm/l/formless-forms.svg?style=flat-square)](https://github.com/superman2971/formless-forms/LICENSE)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## About
 
-## Code scaffolding
+Formless Forms are a small Angular components library with the objective of providing components that can be combined in any fashion to create dynamic forms with validation that do not require html template forms. Formless Forms are flexible, dynamic, and extendable across frameworks / applications.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Demo
 
-## Build
+Here is a [demo site showing formless-form elements](https://github.com/superman2971/formless-forms) in action.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Usage Example
 
-## Running unit tests
+Simple Examples for a few components such as the _Standard Input_:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```json
+{
+  "code": "./formless-forms",
+  "sample": "@superman2971",
+  "etc": "0.0.0",
+  "FormlessForms": {
+    "MakeIt": {
+      "Happen": "We'll place code usage examples here"
+    }
+  }
+}
+```
 
-## Running end-to-end tests
+## Features
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Elements
+  * Standard Input Component
 
-## Further help
+### TO DO
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Much more still in development. Will be adding components for elements, dynamic validations and styles, and also considering adding in modals, buttons, cards, etc.
