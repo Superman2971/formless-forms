@@ -1,9 +1,18 @@
-<div>
+<div class="main">
   <formless-standard-input
     placeholder="Email Address"
     init=""
     [dirty]="false"
     (value)="email=$event">
   </formless-standard-input>
+  <formless-card>TESTING</formless-card>
+  <formless-card>
+    <formless-standard-input
+      placeholder="Email Address"
+      init=""
+      [dirty]="false"
+      (value)="email=$event">
+    </formless-standard-input>
+  </formless-card>
 </div>
 
