@@ -1,0 +1,98 @@
+@import '../../../variables.scss';
+
+.standard-input {
+  margin: 0 0 8px;
+  min-height: 54px;
+  position: relative;
+  width: 100%;
+
+  label {
+    color: #8793a8;
+    font-size: 16px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 16px;
+    transition: all 0.3s cubic-bezier(0.3, 0.1, 0.3, 0.9);
+
+    &.active {
+      font-size: 10px;
+      top: 0;
+
+      span {
+        font-size: 8px;
+      }
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    color: #0a2c4c;
+    font-size: 16px;
+    margin: 16px 0 0;
+    outline: none;
+    padding: 0 32px 0 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .validation-icon {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    i {
+      background-color: $sh-green;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      pointer-events: none;
+  
+      &.invalid {
+        background-color: $sh-red;
+      }
+    }
+  }
+
+  .hidden-type {
+    cursor: pointer;
+    position: absolute;
+    right: 32px;
+    top: 8px;
+
+    i {
+      position: relative;
+      bottom: 4px;
+    }
+  }
+
+  .description {
+    font-size: 10px;
+    font-weight: 400;
+    margin: 8px 0 0;
+  }
+
+  .error {
+    color: $sh-red;
+    font-size: 10px;
+    margin: 8px 0 0;
+  }
+
+  .card-type {
+    left: 68px;
+    position: absolute;
+    top: -8px;
+
+    img {
+      max-height: 20px;
+      max-width: 32px;
+      min-width: 32px;
+    }
+  }
+}

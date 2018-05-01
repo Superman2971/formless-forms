@@ -1,0 +1,38 @@
+<div class="standard-input">
+  <label [class.active]="focused || input">
+    {{placeholder}}
+    <span *ngIf="optional">&nbsp;(Optional)</span>
+  </label>
+  <input
+    [(ngModel)]="input"
+    alt="{{placeholder}} Input"
+    type="{{type}}"
+    value="{{input}}"
+    (focus)="focused = true"
+    (blur)="focused = false; dirty = true"
+    (input)="sendValue(input)"
+    [attr.maxlength]="maxlength || 200"
+    [disabled]="disabled"
+  />
+  <div *ngIf="hiddenType" class="hidden-type">
+    <i *ngIf="type === 'password'" class="material-icons" (click)="type = 'text'">visibility</i>
+    <i *ngIf="type === 'text'" class="material-icons" (click)="type = 'password'">visibility_off</i>
+  </div>
+  <div *ngIf="!optional && !minlength" class="validation-icon">
+    <i *ngIf="input && dirty" class="material-icons">check</i>
+    <i *ngIf="!input && dirty" class="material-icons invalid">error</i>
+  </div>
+  <div *ngIf="!optional && minlength" class="validation-icon">
+    <i *ngIf="input && input.length >= minlength  && dirty" class="material-icons">check</i>
+    <i *ngIf="!input && dirty" class="material-icons invalid">error</i>
+    <i *ngIf="input && input.length < minlength && dirty" class="material-icons invalid">error</i>
+  </div>
+  <div *ngIf="email" class="validation-icon">
+    <i *ngIf="emailValid && input && dirty" class="material-icons">check</i>
+    <i *ngIf="(!emailValid || !input) && dirty" class="material-icons invalid">error</i>
+  </div>
+  <div *ngIf="description && !input" class="description">{{description}}</div>
+  <div *ngIf="!optional && !input && dirty" class="error">*{{placeholder}} is a required field</div>
+  <div *ngIf="email && !emailValid && dirty" class="error">*{{input}} does not match our email pattern</div>
+  <div *ngIf="minlength && input && input.length < minlength && dirty" class="error">*minimum length of {{minlength}}</div>
+</div>
