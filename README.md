@@ -3,7 +3,7 @@
 > Angular component library for dynamic form creation with validation with the need of template forms.
 
 [![npm](https://img.shields.io/npm/v/formless-forms.svg?style=flat-square)](https://www.npmjs.com/package/formless-forms)
-[![npm License](https://img.shields.io/npm/l/formless-forms.svg?style=flat-square)](https://github.com/superman2971/formless-forms/LICENSE)
+[![npm License](https://img.shields.io/npm/l/formless-forms.svg?style=flat-square)](https://github.com/superman2971/formless-forms/blob/master/LICENSE)
 
 ## About
 
