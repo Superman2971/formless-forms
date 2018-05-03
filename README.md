@@ -21,7 +21,7 @@ Simple Examples for a few components such as the _Standard Input_:
 {
   "code": "./formless-forms",
   "sample": "@superman2971",
-  "etc": "0.0.0",
+  "etc": "0.1.0",
   "FormlessForms": {
     "MakeIt": {
       "Happen": "We'll place code usage examples here"
@@ -34,6 +34,9 @@ Simple Examples for a few components such as the _Standard Input_:
 
 * Elements
   * Standard Input Component
+  * Card
+  * Button
+  * Toggle
 
 ### TO DO
 
