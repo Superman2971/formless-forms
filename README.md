@@ -35,11 +35,13 @@ export class AppModule { }
 
 ## Features
 
+All components are available in separate modules so that you can load only what you need with minimal code.
+
 * Elements
-  * Standard Input Component
-  * Card
-  * Button
-  * Toggle
+  * Standard Input Component - from `FormlessStandardInputModule`
+  * Card Component - from `FormlessCardModule`
+  * Button Component - from `FormlessButtonModule`
+  * Toggle Component - from `FormlessToggleModule`
 
 ### TO DO
 
