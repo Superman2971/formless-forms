@@ -1,0 +1,4 @@
+<div class="button" [class.disabled]="disabled" [class.colored]="color ? true : false" [style.background]="color">
+  <i *ngIf="icon" class="material-icons">{{icon}}</i>
+  <div *ngIf="text" [innerHtml]="text | uppercase"></div>
+</div>

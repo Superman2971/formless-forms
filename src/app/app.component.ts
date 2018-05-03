@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'formless';
+  toggle1: boolean = false;
+  toggle2: boolean = true;
 }

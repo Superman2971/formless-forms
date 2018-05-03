@@ -1,18 +1,41 @@
 <div class="main">
   <formless-standard-input
     placeholder="Email Address"
+    email="true"
     init=""
     [dirty]="false"
     (value)="email=$event">
   </formless-standard-input>
-  <formless-card>TESTING</formless-card>
+  <div class="row">
+    <formless-button icon="add" text="new button"></formless-button>
+    <formless-button icon="info_outline" text="disabled button" disabled="true"></formless-button>
+    <formless-button text="Color Button" color="#15ca53"></formless-button>
+    <formless-button text="Disabled Color Button" color="#15ca53" disabled="true"></formless-button>
+  </div>
   <formless-card>
     <formless-standard-input
-      placeholder="Email Address"
-      init=""
+      placeholder="Name"
+      init="Ian Gold"
       [dirty]="false"
-      (value)="email=$event">
+      (value)="name=$event">
     </formless-standard-input>
+  </formless-card>
+  <formless-card>
+    <div>TESTING {{name}} {{email}}</div>
+    <div class="row">
+      <formless-button icon="add" text="new button"></formless-button>
+      <formless-button icon="info_outline" text="disabled button" disabled="true"></formless-button>
+      <formless-button text="Color Button" color="#15ca53"></formless-button>
+      <formless-button text="Disabled Color Button" color="#15ca53" disabled="true"></formless-button>
+    </div>
+  </formless-card>
+  <formless-card>
+    <div class="row">
+      <formless-toggle (change)="toggle1=$event"></formless-toggle>
+      <div>Toggle 1: {{toggle1}}</div>
+      <formless-toggle checked="true" (change)="toggle2=$event"></formless-toggle>
+      <div>Toggle 2: {{toggle2}}</div>
+    </div>
   </formless-card>
 </div>
 

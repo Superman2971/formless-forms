@@ -1,0 +1,58 @@
+@import '../../../variables.scss';
+
+.toggle-switch {
+  background-color: #8793a8;
+  border: 1px solid #d8d8d8;
+  border-radius: 20px;
+  box-shadow: #d8d8d8 0 0 0 0 inset;
+  box-sizing: content-box;
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  transition: 0.3s ease-out all;
+  width: 56px;
+
+  &.checked {
+    background-color: $sh-green;
+    border-color: $sh-green;
+
+    small {
+      left: 36px;
+    }
+  }
+
+  small {
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: $sh-box-shadow-level-1;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.3s ease-out all;
+    width: 20px;
+  }
+
+  span {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+
+    &.yes {
+      left: 10px;
+      position: absolute;
+      top: 2px;
+    }
+
+    &.no {
+      position: absolute;
+      right: 10px;
+      top: 2px;
+    }
+  }
+}
