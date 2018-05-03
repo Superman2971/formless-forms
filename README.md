@@ -15,19 +15,22 @@ Here is a [demo site showing formless-form elements](https://github.com/superman
 
 ## Usage Example
 
-Simple Examples for a few components such as the _Standard Input_:
+To get started please `npm install formless-forms` and then include the modules into your application. Angular example below:
 
-```json
-{
-  "code": "./formless-forms",
-  "sample": "@superman2971",
-  "etc": "0.1.0",
-  "FormlessForms": {
-    "MakeIt": {
-      "Happen": "We'll place code usage examples here"
-    }
-  }
-}
+```typescript
+import { FormlessStandardInputModule } from 'formless-forms';
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormlessStandardInputModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 ```
 
 ## Features
