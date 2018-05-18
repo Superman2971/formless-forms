@@ -4,6 +4,7 @@ import { FormlessStandardInputModule } from './elements/standard-input/standard-
 import { FormlessCardModule } from './elements/card/card.module';
 import { FormlessButtonModule } from './elements/button/button.module';
 import { FormlessToggleModule } from './elements/toggle/toggle.module';
+import { FormlessSliderModule } from './elements/slider/slider.module';
 import { AppComponent } from './app.component';
 
 
@@ -12,8 +13,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormlessStandardInputModule,
     FormlessCardModule,
+    FormlessButtonModule,
     FormlessToggleModule,
-    FormlessButtonModule
+    FormlessSliderModule
   ],
   declarations: [
     AppComponent

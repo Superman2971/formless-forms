@@ -11,7 +11,7 @@ Formless Forms are a small Angular components library with the objective of prov
 
 ## Demo
 
-Here is a [demo site showing formless-form elements](https://github.com/superman2971/formless-forms) in action.
+NOT YET READY: a [demo site showing formless-form elements](https://github.com/superman2971/formless-forms) in action.
 
 ## Usage Example
 

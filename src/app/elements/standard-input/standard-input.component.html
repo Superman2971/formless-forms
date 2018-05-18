@@ -31,7 +31,7 @@
     <i *ngIf="emailValid && input && dirty" class="material-icons">check</i>
     <i *ngIf="(!emailValid || !input) && dirty" class="material-icons invalid">error</i>
   </div>
-  <div *ngIf="description && !input" class="description">{{description}}</div>
+  <div *ngIf="description && !input" class="description" [innerHtml]="description"></div>
   <div *ngIf="!optional && !input && dirty" class="error">*{{placeholder}} is a required field</div>
   <div *ngIf="email && !emailValid && dirty" class="error">*{{input}} does not match our email pattern</div>
   <div *ngIf="minlength && input && input.length < minlength && dirty" class="error">*minimum length of {{minlength}}</div>

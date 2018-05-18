@@ -1,0 +1,17 @@
+<div class="slider">
+  <div class="value" [innerHtml]="currentValue"></div>
+  <input
+    #select
+    type="range"
+    class="slider"
+    [style.backgroundImage]="background"
+    [min]="min"
+    [max]="max"
+    [value]="init"
+    (input)="update($event)"
+  />
+  <div *ngIf="tooltip" class="tooltip" (mouseover)="show = true" (mouseleave)="show = false" [style.color]="tooltipColor">
+    <i class="material-icons">info_outline</i>
+    <div *ngIf="show" class="popup" [innerHtml]="tooltip" [style.border-color]="tooltipColor"></div>
+  </div>
+</div>

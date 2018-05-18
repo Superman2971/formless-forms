@@ -17,8 +17,8 @@
   width: 56px;
 
   &.checked {
-    background-color: $sh-green;
-    border-color: $sh-green;
+    background-color: $green;
+    border-color: $green;
 
     small {
       left: 36px;
@@ -28,7 +28,7 @@
   small {
     background-color: #fff;
     border-radius: 100%;
-    box-shadow: $sh-box-shadow-level-1;
+    box-shadow: $box-shadow-level-1;
     height: 20px;
     left: 0;
     position: absolute;

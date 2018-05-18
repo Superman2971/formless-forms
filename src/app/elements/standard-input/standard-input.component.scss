@@ -48,14 +48,14 @@
     top: 8px;
 
     i {
-      background-color: $sh-green;
+      background-color: $green;
       border-radius: 8px;
       color: #fff;
       font-size: 16px;
       pointer-events: none;
   
       &.invalid {
-        background-color: $sh-red;
+        background-color: $red;
       }
     }
   }
@@ -79,7 +79,7 @@
   }
 
   .error {
-    color: $sh-red;
+    color: $red;
     font-size: 10px;
     margin: 8px 0 0;
   }

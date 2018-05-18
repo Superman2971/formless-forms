@@ -1,30 +1,9 @@
 /* Using to store all of the global variables - use @import to include on component styles*/
 // colors
-$sh-black: #000;
-$sh-black-6: rgba(0, 0, 0, 0.06);
-$sh-black-12: rgba(0, 0, 0, 0.12);
-$sh-black-24: rgba(0, 0, 0, 0.24);
-$sh-white: #fff;
-$sh-white-54: rgba(255, 255, 255, 0.54);
-$sh-orange: #ffa000;
-$sh-orange-hover: rgba(255, 160, 0, 0.12);
-$sh-blue: #2275c3;
-$sh-blue-hover: rgba(34, 117, 195, 0.12);
-$sh-green: #15ca53;
-$sh-green-hover: rgba(19, 171, 71, 0.24);
-$sh-red: #f6511d;
-$sh-red-hover: rgba(246, 81, 29, 0.12);
-// document colors
-$sh-0a2c4c: #0a2c4c;
-$sh-8793a8: #8793a8;
-$sh-d5dae5: #d5dae5;
-$sh-eef1f7: #eef1f7;
-$sh-d8d8d8: #d8d8d8;
+$green: #15ca53;
+$red: #f6511d;
 // shadows
-$sh-box-shadow-level-1: 0 1px 3px rgba(10, 44, 76, 0.12), 0 1px 2px rgba(10, 44, 76, 0.12);
-$sh-box-shadow-level-2: 0 3px 6px rgba(10, 44, 76, 0.12), 0 3px 6px rgba(10, 44, 76, 0.12);
-$sh-box-shadow-level-3: 0 14px 28px -4px rgba(10, 44, 76, 0.12), 0 10px 10px -4px rgba(10, 44, 76, 0.12);
-$sh-box-shadow-level-4: 0 19px 38px -6px rgba(10, 44, 76, 0.24), 0 10px 20px -6px rgba(10, 44, 76, 0.12);
-$sh-box-shadow-level-5: 0 24px 48px -8px rgba(10, 44, 76,0.24), 0 19px 38px -8px rgba(10, 44, 76,0.18);
+$box-shadow-level-1: 0 1px 3px rgba(10, 44, 76, 0.12), 0 1px 2px rgba(10, 44, 76, 0.12);
+$box-shadow-level-2: 0 3px 6px rgba(10, 44, 76, 0.12), 0 3px 6px rgba(10, 44, 76, 0.12);
 // transitions
-$sh-card-hover: all 0.3s cubic-bezier(0.25, 0.8, 0.25,1);
+$card-hover: all 0.3s cubic-bezier(0.25, 0.8, 0.25,1);

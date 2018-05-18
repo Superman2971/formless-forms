@@ -18,15 +18,15 @@
   width: 100%;
 
   &:hover {
-    box-shadow: $sh-box-shadow-level-2;
+    box-shadow: $box-shadow-level-2;
   }
 
   &.colored {
-    box-shadow: $sh-box-shadow-level-1;
+    box-shadow: $box-shadow-level-1;
     color: #fff;
 
     &:hover {
-      box-shadow: $sh-box-shadow-level-2;
+      box-shadow: $box-shadow-level-2;
     }
 
     &.disabled {

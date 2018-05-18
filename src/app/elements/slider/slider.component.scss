@@ -1,0 +1,116 @@
+@import '../../../variables.scss';
+
+.slider {
+  align-items: center;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 100px 1fr;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+
+  .value {
+    font-size: 32px;
+    font-weight: 300;
+  }
+
+  $thumb-color: #fff !default;
+  $thumb-radius: 20px !default;
+  $thumb-height: 40px !default;
+  $thumb-width: 40px !default;
+
+  $track-width: 100% !default;
+  $track-height: 8px !default;
+  $track-radius: 5px !default;
+
+  @mixin track {
+    box-shadow: $box-shadow-level-1;
+    cursor: pointer;
+    height: $track-height;
+    transition: all .2s ease;
+    width: $track-width;
+  }
+
+  @mixin thumb {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.24);
+    background: $thumb-color;
+    border-radius: $thumb-radius;
+    cursor: pointer;
+    height: $thumb-height;
+    width: $thumb-width;
+  }
+
+  [type='range'] {
+    -webkit-appearance: none;
+    border-radius: $track-radius;
+    margin: $thumb-height / 2 0;
+    outline: none;
+    width: $track-width;
+
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+
+    &::-webkit-slider-thumb {
+      @include thumb;
+      -webkit-appearance: none;
+      margin-top: (($track-height) / 2) - ($thumb-height / 2);
+    }
+
+    &::-moz-range-track {
+      @include track;
+    }
+
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+
+    &::-ms-track {
+      @include track;
+      border-color: transparent;
+      border-width: ($thumb-height / 2) 0;
+      color: transparent;
+    }
+
+    &::-ms-fill-lower {
+      border-radius: $track-radius * 2;
+    }
+
+    &::-ms-fill-upper {
+      border-radius: $track-radius * 2;
+    }
+
+    &::-ms-thumb {
+      @include thumb;
+      margin-top: 0;
+    }
+  }
+
+  .tooltip {
+    color: #2275c3;
+    position: absolute;
+    right: 0;
+    top: -8px;
+
+    i {
+      color: rgba(0, 0, 0, 0.24);
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .popup {
+      background-color: #fff;
+      border: 1px solid #2275c3;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      max-width: 280px;
+      min-width: 250px;
+      padding: 8px;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      z-index: 1;
+    }
+  }
+}
