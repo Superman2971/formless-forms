@@ -1,0 +1,11 @@
+<div class="checkbox"
+  [class.checked]="checked"
+  [style.background]="checked ? color : '#fff'"
+  [style.border-color]="color"
+  [class.colored]="color ? true : false"
+  [style.color]="color"
+  [style.height.px]="size"
+  [style.width.px]="size"
+  (click)="onToggle()">
+  <i class="material-icons" [class.checked]="checked" [style.font-size.px]="size">check</i>
+</div>

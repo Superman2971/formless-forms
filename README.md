@@ -42,7 +42,13 @@ All components are available in separate modules so that you can load only what 
   * Card Component - from `FormlessCardModule`
   * Button Component - from `FormlessButtonModule`
   * Toggle Component - from `FormlessToggleModule`
+  * Slider Component - from `FormlessSliderModule`
+  * Checkbox Component - from `FormlessCheckboxModule`
 
 ### TO DO
 
 Much more still in development. Will be adding components for elements, dynamic validations and styles, and also considering adding in modals, buttons, cards, etc.
+
+* additional components such as Dropdown, Searchbar, and much much more
+* change the Input/Output of `Standard Input Component` with more dynamic validations and styles. Add custom regex pattern validation with customer validation message.
+* need to create a Demo Site for all of the components

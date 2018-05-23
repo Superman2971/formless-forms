@@ -5,6 +5,7 @@ import { FormlessCardModule } from './elements/card/card.module';
 import { FormlessButtonModule } from './elements/button/button.module';
 import { FormlessToggleModule } from './elements/toggle/toggle.module';
 import { FormlessSliderModule } from './elements/slider/slider.module';
+import { FormlessCheckboxModule } from './elements/checkbox/checkbox.module';
 import { AppComponent } from './app.component';
 
 
@@ -15,7 +16,8 @@ import { AppComponent } from './app.component';
     FormlessCardModule,
     FormlessButtonModule,
     FormlessToggleModule,
-    FormlessSliderModule
+    FormlessSliderModule,
+    FormlessCheckboxModule
   ],
   declarations: [
     AppComponent

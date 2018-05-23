@@ -20,9 +20,17 @@ Additional components added
 * `Button Component` has no Output, can simply add a (click) function to find the clicks
 * `Toggle Component` allow you to init a value and receive a response for all changes
 
-# 0.2.0 (in progress)
+# 0.1.4 (2018-05-22)
 
-### To Do
+Missed a couple of the updates in the changelog, but they are simple updates.
 
-* additional components such as Dropdown, Searchbar, and much much more
-* change the Input/Output of `Standard Input Component` with more dynamic validations and styles. Add custom regex pattern validation with customer validation message.
+### Updates
+
+* Additional upgrades to the Standard Input component
+* Custom color and addition of icons to the buttons
+* new components (listed below)
+
+### Features
+
+* `Slider Component` - allows you to select from within a range using a range type input with styled slider
+* `Checkbox Component` - simple checkbox with custome size and color available

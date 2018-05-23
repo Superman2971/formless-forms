@@ -1,0 +1,35 @@
+@import '../../../variables.scss';
+
+.checkbox {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.87);
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  transition: 0.3s ease-in-out all;
+  width: 24px;
+
+  &.colored {
+    color: #fff !important;
+
+    &.checked {
+      border-color: transparent;
+    }
+  }
+
+  i {
+    font-size: 24px;
+    opacity: 0;
+    transition: 0.3s ease-in-out all;
+
+    &.checked {
+      opacity: 1;
+    }
+  }
+}
