@@ -8,9 +8,9 @@
   </formless-standard-input>
   <div class="row">
     <formless-button icon="add" text="new button"></formless-button>
-    <formless-button icon="info_outline" text="disabled button" disabled="true"></formless-button>
+    <formless-button icon="info_outline" text="disabled button" [disabled]="toggle1"></formless-button>
     <formless-button text="Color Button" color="#15ca53"></formless-button>
-    <formless-button text="Disabled Color Button" color="#15ca53" disabled="true"></formless-button>
+    <formless-button text="Disabled Color Button" color="#15ca53" [disabled]="toggle2"></formless-button>
   </div>
   <formless-card>
     <formless-standard-input
@@ -23,10 +23,10 @@
   <formless-card>
     <div>TESTING {{name}} {{email}}</div>
     <div class="row">
-      <formless-button icon="add" text="new button"></formless-button>
-      <formless-button icon="info_outline" text="disabled button" disabled="true"></formless-button>
-      <formless-button text="Color Button" color="#15ca53"></formless-button>
-      <formless-button text="Disabled Color Button" color="#15ca53" disabled="true"></formless-button>
+      <formless-button icon="add" text="new button" inverse="true"></formless-button>
+      <formless-button icon="info_outline" text="disabled button" [disabled]="toggle1"></formless-button>
+      <formless-button text="Color Button" color="#15ca53" inverse="true"></formless-button>
+      <formless-button text="Disabled Color Button" color="#15ca53" [disabled]="toggle2"></formless-button>
     </div>
   </formless-card>
   <formless-card>

@@ -1,4 +1,10 @@
-<div class="button" [class.disabled]="disabled" [class.colored]="color ? true : false" [style.background]="color">
+<div class="button"
+  [class.colored]="color ? true : false"
+  [class.disabled]="disabled"
+  [class.inverse]="inverse"
+  [style.background]="inverse ? (color ? '#fff' : 'rgba(0, 0, 0, 0.54)') : color"
+  [style.border-color]="color"
+  [style.color]="inverse ? (color ? color : '#fff') : (color ? '#fff' : 'rgba(0, 0, 0, 0.54)')">
   <i *ngIf="icon" class="material-icons">{{icon}}</i>
   <div *ngIf="text" [innerHtml]="text | uppercase"></div>
 </div>

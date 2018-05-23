@@ -6,10 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class FormlessButtonComponent {
-  @Input() icon;
-  @Input() text;
-  @Input() disabled;
-  @Input() color;
+  @Input() icon: string;
+  @Input() text: string;
+  @Input() disabled: boolean;
+  @Input() color: string;
+  @Input() inverse: boolean;
 
   constructor() {}
 }

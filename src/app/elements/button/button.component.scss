@@ -40,6 +40,12 @@
     pointer-events: none;
   }
 
+  &.inverse {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+  }
+
   i {
     font-size: 18px;
     padding: 0 8px 0 0;

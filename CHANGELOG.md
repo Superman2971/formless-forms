@@ -20,7 +20,7 @@ Additional components added
 * `Button Component` has no Output, can simply add a (click) function to find the clicks
 * `Toggle Component` allow you to init a value and receive a response for all changes
 
-# 0.1.4 (2018-05-22)
+# 0.2.0 (2018-05-22)
 
 Missed a couple of the updates in the changelog, but they are simple updates.
 
