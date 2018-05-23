@@ -23,20 +23,14 @@
 
   &.colored {
     box-shadow: $box-shadow-level-1;
-    color: #fff;
 
     &:hover {
       box-shadow: $box-shadow-level-2;
     }
-
-    &.disabled {
-      background-color: rgba(0, 0, 0, 0.12) !important;
-      color: #fff;
-    }
   }
 
   &.disabled {
-    color: rgba(0, 0, 0, 0.12);
+    opacity: 0.8;
     pointer-events: none;
   }
 
