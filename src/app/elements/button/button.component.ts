@@ -13,4 +13,10 @@ export class FormlessButtonComponent {
   @Input() inverse: boolean;
 
   constructor() {}
+
+  clicked(evt) {
+    if (this.disabled) {
+      evt.stopPropagation();
+    }
+  }
 }

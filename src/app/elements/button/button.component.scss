@@ -21,17 +21,29 @@
     box-shadow: $box-shadow-level-2;
   }
 
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
   &.colored {
     box-shadow: $box-shadow-level-1;
 
     &:hover {
       box-shadow: $box-shadow-level-2;
     }
-  }
 
-  &.disabled {
-    opacity: 0.8;
-    pointer-events: none;
+    &.disabled {
+      opacity: 0.6;
+
+      &:hover {
+        box-shadow: $box-shadow-level-1;
+      }
+    }
   }
 
   &.inverse {
