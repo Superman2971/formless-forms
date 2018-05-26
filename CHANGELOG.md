@@ -34,3 +34,18 @@ Missed a couple of the updates in the changelog, but they are simple updates.
 
 * `Slider Component` - allows you to select from within a range using a range type input with styled slider
 * `Checkbox Component` - simple checkbox with custome size and color available
+
+# 0.3.0 (2018-05-22)
+
+### Updates
+
+* Customizations for the button, including inverse color and correction for disabled button to ensure no click events make it through
+* Created an initial demo page and updated the README
+
+### Features
+
+* `Radio Component` - individual radio buttons that can work as a group. Also provide several inputs for customization and transclusion for custom labels.
+
+### Breaking Changes
+
+* `Input Component` - renamed the **Standard Input Component** into **Input Component** so you will need to update the module included as `FormlessInputComponent` and change the html selector to `formless-input`.
