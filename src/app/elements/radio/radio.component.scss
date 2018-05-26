@@ -1,0 +1,45 @@
+@import '../../../variables.scss';
+
+.radio {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+
+  // &.left {
+  //   display: grid;
+  // }
+
+  .checkbox {
+    align-items: center;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+    margin: 0 8px 0 0;
+
+    &.circle {
+      border-radius: 100%;
+
+      span {
+        border-radius: 100%;
+      }
+    }
+
+    &.checked {
+      span {
+        height: calc(100% - 4px);
+        width: calc(100% - 4px);
+      }
+    }
+
+    span {
+      height: 0;
+      transition: 0.3s ease-in-out;
+      width: 0;
+    }
+  }
+}

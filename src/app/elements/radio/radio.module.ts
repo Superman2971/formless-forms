@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 // Components
-import { FormlessStandardInputComponent } from './standard-input.component';
+import { FormlessRadioComponent } from './radio.component';
 
 @NgModule({
   imports: [
@@ -10,10 +10,10 @@ import { FormlessStandardInputComponent } from './standard-input.component';
     FormsModule
   ],
   declarations: [
-    FormlessStandardInputComponent
+    FormlessRadioComponent
   ],
   exports: [
-    FormlessStandardInputComponent
+    FormlessRadioComponent
   ]
 })
-export class FormlessStandardInputModule { }
+export class FormlessRadioModule { }

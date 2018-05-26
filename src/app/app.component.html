@@ -16,8 +16,9 @@
       <a href="#card">Card</a>
       <a href="#checkbox">Checkbox</a>
       <a href="#slider">Slider</a>
-      <a href="#standard-input">Standard Input</a>
+      <a href="#input">Input</a>
       <a href="#toggle">Toggle</a>
+      <a href="#radio">Radio</a>
     </div>
     <!-- SCROLLABLE PAGE -->
     <div class="page">
@@ -30,6 +31,7 @@
       <div>
         <div class="title">Why Formless</div>
         <div>let me explain why formless forms over template forms, angular/reactive/dynamic forms?</div>
+        <div>These components were built to be simple. You can read and duplicate the code without much effort and it should allow you to do a lot of customization for your forms. The objective is to simplify components, forms, and minimize code.</div>
       </div>
       <!-- BUTTON -->
       <div id="button" class="title">Button</div>
@@ -65,10 +67,10 @@
               (change)="icon=($event ? 'info_outline' : '')"
             ></formless-checkbox>
           </div>
-          <formless-standard-input
+          <formless-input
             placeholder="Button Text"
             (value)="text=$event">
-          </formless-standard-input>
+          </formless-input>
         </div>
       </formless-card>
       <!-- CARD -->
@@ -125,23 +127,23 @@
           <div>Slider #2: {{slider2}}</div>
         </div>
       </formless-card>
-      <!-- STANDARD INPUT -->
-      <div id="standard-input" class="title">Standard Input</div>
+      <!-- INPUT -->
+      <div id="input" class="title">Input</div>
       <formless-card>
         <div>Input Results: {{name}} {{email}}</div>
-        <formless-standard-input
+        <formless-input
           placeholder="Name"
           init="Ian Gold"
           [dirty]="false"
           (value)="name=$event">
-        </formless-standard-input>
-        <formless-standard-input
+        </formless-input>
+        <formless-input
           placeholder="Email Address"
           email="true"
           init=""
           [dirty]="false"
           (value)="email=$event">
-        </formless-standard-input>
+        </formless-input>
       </formless-card>
       <!-- TOGGLE -->
       <div id="toggle" class="title">Toggle</div>
@@ -151,6 +153,41 @@
           <div>Toggle 1: {{toggle1}}</div>
           <formless-toggle checked="true" (change)="toggle2=$event"></formless-toggle>
           <div>Toggle 2: {{toggle2}}</div>
+        </div>
+      </formless-card>
+      <!-- RADIO -->
+      <div id="radio" class="title">Radio</div>
+      <formless-card>
+        <div class="row">
+          <formless-radio
+            name="first"
+            value="first"
+            [groupValue]="radio1"
+            color="#15ca53"
+            circle="true"
+            (change)="radio1=$event">
+            something big
+          </formless-radio>
+          <formless-radio
+            name="second"
+            value="second"
+            [groupValue]="radio1"
+            color="#15ca53"
+            left="true"
+            size="32"
+            (change)="radio1=$event">
+            something bigger
+          </formless-radio>
+          <formless-radio
+            name="third"
+            value="third"
+            [groupValue]="radio1"
+            [checked]="true"
+            circle="true"
+            (change)="radio1=$event">
+            something biggest
+          </formless-radio>
+          <div>radio 1: {{radio1}}</div>
         </div>
       </formless-card>
       <!-- ADDITIONAL INFORMATION -->

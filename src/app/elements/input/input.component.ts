@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, SimpleChange } from '@angular/core';
 
 @Component({
-  selector: 'formless-standard-input',
-  templateUrl: './standard-input.component.html',
-  styleUrls: ['./standard-input.component.scss']
+  selector: 'formless-input',
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.scss']
 })
-export class FormlessStandardInputComponent implements OnInit, OnChanges {
+export class FormlessInputComponent implements OnInit, OnChanges {
   @Input() placeholder;
   @Input() init;
   @Input() dirty;
