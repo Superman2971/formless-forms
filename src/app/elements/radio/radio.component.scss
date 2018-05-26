@@ -8,10 +8,6 @@
   position: relative;
   width: 100%;
 
-  // &.left {
-  //   display: grid;
-  // }
-
   .checkbox {
     align-items: center;
     border-radius: 2px;
@@ -20,6 +16,10 @@
     display: flex;
     justify-content: center;
     margin: 0 8px 0 0;
+
+    &.left {
+      margin: 0 0 0 8px;
+    }
 
     &.circle {
       border-radius: 100%;

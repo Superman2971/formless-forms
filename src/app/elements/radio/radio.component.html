@@ -1,7 +1,8 @@
 <div class="radio"
 [class.left]="left"
 (click)="clicked()">
-  <div class="checkbox"
+  <div *ngIf="!left"
+  class="checkbox"
   [class.checked]="checked"
   [class.circle]="circle"
   [style.color]="color"
@@ -10,4 +11,13 @@
     <span [style.background-color]="color"></span>
   </div>
   <ng-content></ng-content>
+  <div *ngIf="left"
+  class="checkbox left"
+  [class.checked]="checked"
+  [class.circle]="circle"
+  [style.color]="color"
+  [style.height.px]="size"
+  [style.width.px]="size">
+    <span [style.background-color]="color"></span>
+  </div>
 </div>

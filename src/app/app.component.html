@@ -37,7 +37,7 @@
       <div id="button" class="title">Button</div>
       <formless-card>
         <div class="row">
-          <formless-button icon="{{icon}}" text="{{text ? text : 'button'}}"></formless-button>
+          <formless-button icon="{{buttonIcon}}" text="{{text ? text : 'button'}}"></formless-button>
           <formless-button icon="add" text="inverse button" inverse="true"></formless-button>
           <formless-button text="Color Button" color="#15ca53"></formless-button>
           <formless-button text="inverse Color Button" color="#15ca53" inverse="true"></formless-button>
@@ -49,7 +49,44 @@
         <div class="row margin-top">
           <formless-toggle (change)="toggle=$event"></formless-toggle>
           <div>Disable Buttons: {{toggle}}</div>
-          <div>
+          <formless-radio
+            value=""
+            [groupValue]="buttonIcon"
+            color="#15ca53"
+            circle="true"
+            size="24"
+            checked="true"
+            (change)="buttonIcon=$event">
+            No Icon
+          </formless-radio>
+          <formless-radio
+            value="add"
+            [groupValue]="buttonIcon"
+            color="#15ca53"
+            circle="true"
+            size="24"
+            (change)="buttonIcon=$event">
+            Add Icon
+          </formless-radio>
+          <formless-radio
+            value="email"
+            [groupValue]="buttonIcon"
+            color="#15ca53"
+            circle="true"
+            size="24"
+            (change)="buttonIcon=$event">
+            Email Icon
+          </formless-radio>
+          <formless-radio
+            value="info_outline"
+            [groupValue]="buttonIcon"
+            color="#15ca53"
+            circle="true"
+            size="24"
+            (change)="buttonIcon=$event">
+            Info Icon
+          </formless-radio>
+          <!-- <div>
             <span>Email Icon:</span>
             <formless-checkbox
               (change)="icon=($event ? 'email' : '')"
@@ -66,7 +103,7 @@
             <formless-checkbox
               (change)="icon=($event ? 'info_outline' : '')"
             ></formless-checkbox>
-          </div>
+          </div> -->
           <formless-input
             placeholder="Button Text"
             (value)="text=$event">
@@ -160,7 +197,6 @@
       <formless-card>
         <div class="row">
           <formless-radio
-            name="first"
             value="first"
             [groupValue]="radio1"
             color="#15ca53"
@@ -169,7 +205,6 @@
             something big
           </formless-radio>
           <formless-radio
-            name="second"
             value="second"
             [groupValue]="radio1"
             color="#15ca53"
@@ -179,7 +214,6 @@
             something bigger
           </formless-radio>
           <formless-radio
-            name="third"
             value="third"
             [groupValue]="radio1"
             [checked]="true"
