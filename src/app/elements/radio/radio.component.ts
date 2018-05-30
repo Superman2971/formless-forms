@@ -31,9 +31,7 @@ export class FormlessRadioComponent implements OnChanges {
   }
 
   clicked() {
-    if (!this.checked) {
-      this.checked = true;
-      this.change.emit(this.value);
-    }
+    this.checked = true;
+    this.change.emit(this.value);
   }
 }

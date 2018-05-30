@@ -35,7 +35,7 @@ Missed a couple of the updates in the changelog, but they are simple updates.
 * `Slider Component` - allows you to select from within a range using a range type input with styled slider
 * `Checkbox Component` - simple checkbox with custome size and color available
 
-# 0.3.0 (2018-05-22)
+# 0.3.0 (2018-05-26)
 
 ### Updates
 
