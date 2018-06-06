@@ -20,6 +20,7 @@ export class FormlessInputComponent implements OnInit, OnChanges {
   @Input() disabled;
   @Input() textarea;
   @Input() rows;
+  @Input() matchThis;
   // ngModel for Input
   input;
   // variables
@@ -29,11 +30,15 @@ export class FormlessInputComponent implements OnInit, OnChanges {
   // variables for custom validations
   emailValid;
   emailRegex;
+  // cariables for matching values
+  lastValue: string = '';
+  notmatching: boolean = false;
 
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
     const init: SimpleChange = changes.init;
+    const matchThis: SimpleChange = changes.matchThis;
     if (this.watchInitChange) {
       if (init && init.currentValue) {
         this.input = init.currentValue;
@@ -46,6 +51,17 @@ export class FormlessInputComponent implements OnInit, OnChanges {
       }
     } else {
       this.watchInitChange = true;
+    }
+    // adding to provide ability to check if matches other input of regex
+    if (matchThis) {
+      if (this.lastValue === this.matchThis) {
+        this.notmatching = false;
+      } else {
+        this.notmatching = true;
+      }
+      if (matchThis && matchThis.firstChange) {
+        this.notmatching = null;
+      }
     }
   }
 
@@ -92,6 +108,16 @@ export class FormlessInputComponent implements OnInit, OnChanges {
         valid = false;
       }
     }
+    // If there is a matchThis check for match validation
+    if (this.matchThis) {
+      this.lastValue = value;
+      if (this.lastValue === this.matchThis) {
+        this.notmatching = false;
+      } else {
+        this.notmatching = true;
+      }
+    }
+    // Complete the send by emitting the proper value to the parent component
     if (valid) {
       this.value.emit(value);
     } else {

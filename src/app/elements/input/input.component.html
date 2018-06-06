@@ -31,8 +31,8 @@
     <i *ngIf="type === 'text'" class="material-icons" (click)="type = 'password'">visibility_off</i>
   </div>
   <div *ngIf="!optional && !minlength" class="validation-icon">
-    <i *ngIf="input && dirty" class="material-icons">check</i>
-    <i *ngIf="!input && dirty" class="material-icons invalid">error</i>
+    <i *ngIf="input && dirty && !notmatching" class="material-icons">check</i>
+    <i *ngIf="(!input && dirty) || notmatching" class="material-icons invalid">error</i>
   </div>
   <div *ngIf="!optional && minlength" class="validation-icon">
     <i *ngIf="input && input.length >= minlength  && dirty" class="material-icons">check</i>
@@ -47,4 +47,5 @@
   <div *ngIf="!optional && !input && dirty" class="error">*{{placeholder}} is a required field</div>
   <div *ngIf="email && !emailValid && dirty" class="error">*{{input}} does not match our email pattern</div>
   <div *ngIf="minlength && input && input.length < minlength && dirty" class="error">*minimum length of {{minlength}}</div>
+  <div *ngIf="input && notmatching" class="error">*Does not match required field</div>
 </div>

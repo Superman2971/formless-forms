@@ -171,34 +171,39 @@
       <!-- INPUT -->
       <div id="input" class="title">Input</div>
       <formless-card>
-        <div>Input Results: {{name}} {{email}} {{text}} {{moretext}}</div>
+        <div>Input Results: {{name}} {{email}} {{email2}} {{text}} {{moretext}}</div>
         <formless-input
           placeholder="Name"
           init="Ian Gold"
           [dirty]="false"
-          (value)="name=$event">
-        </formless-input>
+          (value)="name=$event"
+        ></formless-input>
         <formless-input
           placeholder="Email Address"
           email="true"
-          init=""
           [dirty]="false"
-          (value)="email=$event">
-        </formless-input>
+          (value)="email=$event"
+        ></formless-input>
+        <formless-input
+          placeholder="Email Address Again"
+          [matchThis]="email"
+          [dirty]="false"
+          (value)="email2=$event"
+        ></formless-input>
         <formless-input
           textarea="true"
           placeholder="Text Area 1"
           [dirty]="false"
-          (value)="text=$event">
-        </formless-input>
+          (value)="text=$event"
+        ></formless-input>
         <formless-input
           textarea="true"
           placeholder="Text Area 2"
           rows="7"
           init="Lots of interesting information can be placed here!"
           [dirty]="false"
-          (value)="moretext=$event">
-        </formless-input>
+          (value)="moretext=$event"
+        ></formless-input>
       </formless-card>
       <!-- TOGGLE -->
       <div id="toggle" class="title">Toggle</div>
