@@ -43,9 +43,14 @@
     <i *ngIf="emailValid && input && dirty" class="material-icons">check</i>
     <i *ngIf="(!emailValid || !input) && dirty" class="material-icons invalid">error</i>
   </div>
+  <div *ngIf="customRegex" class="validation-icon">
+    <i *ngIf="customRegexValid && input && dirty" class="material-icons">check</i>
+    <i *ngIf="(!customRegexValid || !input) && dirty" class="material-icons invalid">error</i>
+  </div>
   <div *ngIf="description && !input" class="description" [innerHtml]="description"></div>
   <div *ngIf="!optional && !input && dirty" class="error">*{{placeholder}} is a required field</div>
   <div *ngIf="email && !emailValid && dirty" class="error">*{{input}} does not match our email pattern</div>
+  <div *ngIf="customRegex && !customRegexValid && dirty" class="error" [innerHtml]="regexMessage || '*does not match the required pattern'"></div>
   <div *ngIf="minlength && input && input.length < minlength && dirty" class="error">*minimum length of {{minlength}}</div>
-  <div *ngIf="input && notmatching" class="error">*Does not match required field</div>
+  <div *ngIf="input && notmatching" class="error">*does not match required field</div>
 </div>

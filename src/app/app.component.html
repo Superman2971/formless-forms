@@ -171,7 +171,7 @@
       <!-- INPUT -->
       <div id="input" class="title">Input</div>
       <formless-card>
-        <div>Input Results: {{name}} {{email}} {{email2}} {{text}} {{moretext}}</div>
+        <div>Input Results: {{name}} {{email}} {{email2}} {{text}} {{moretext}} {{phone}}</div>
         <formless-input
           placeholder="Name"
           init="Ian Gold"
@@ -203,6 +203,12 @@
           init="Lots of interesting information can be placed here!"
           [dirty]="false"
           (value)="moretext=$event"
+        ></formless-input>
+        <formless-input
+          placeholder="Phone Custom Regex"
+          regex="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+          regexMessage="does not match the pattern for a phone number"
+          (value)="phone=$event"
         ></formless-input>
       </formless-card>
       <!-- TOGGLE -->

@@ -21,6 +21,8 @@ export class FormlessInputComponent implements OnInit, OnChanges {
   @Input() textarea;
   @Input() rows;
   @Input() matchThis;
+  @Input() regex;
+  @Input() regexMessage;
   // ngModel for Input
   input;
   // variables
@@ -30,9 +32,12 @@ export class FormlessInputComponent implements OnInit, OnChanges {
   // variables for custom validations
   emailValid;
   emailRegex;
-  // cariables for matching values
+  // variables for matching values
   lastValue: string = '';
   notmatching: boolean = false;
+  // variable for custom regex
+  customRegexValid;
+  customRegex;
 
   constructor() {}
 
@@ -73,6 +78,9 @@ export class FormlessInputComponent implements OnInit, OnChanges {
       this.emailRegex = new RegExp(/^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
       /* tslint:enable */
     }
+    if (this.regex) {
+      this.customRegex = new RegExp(this.regex);
+    }
     // set the input type
     this.getType();
   }
@@ -98,6 +106,15 @@ export class FormlessInputComponent implements OnInit, OnChanges {
         if (!this.emailValid) {
           valid = false;
         }
+      }
+      // custom validation
+      if (this.customRegex) {
+        // check matches custom valid regex
+        this.customRegexValid = this.customRegex.test(value);
+        if (!this.customRegexValid) {
+          valid = false;
+        }
+        console.log(this.customRegex, this.customRegexValid);
       }
       // minlength validation
       if (this.minlength && value.length < this.minlength) {
