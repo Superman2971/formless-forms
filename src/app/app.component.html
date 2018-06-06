@@ -37,6 +37,10 @@
       <div id="button" class="title">Button</div>
       <formless-card>
         <div class="row">
+          <formless-button [disabled]="toggle" color="#15ca53" inverse="true">
+            <i class="material-icons">add</i>
+            <div>BUTTON</div>
+          </formless-button>
           <formless-button icon="{{buttonIcon}}" text="{{text ? text : 'button'}}"></formless-button>
           <formless-button icon="add" text="inverse button" inverse="true"></formless-button>
           <formless-button text="Color Button" color="#15ca53"></formless-button>
@@ -167,7 +171,7 @@
       <!-- INPUT -->
       <div id="input" class="title">Input</div>
       <formless-card>
-        <div>Input Results: {{name}} {{email}}</div>
+        <div>Input Results: {{name}} {{email}} {{text}} {{moretext}}</div>
         <formless-input
           placeholder="Name"
           init="Ian Gold"
@@ -180,6 +184,20 @@
           init=""
           [dirty]="false"
           (value)="email=$event">
+        </formless-input>
+        <formless-input
+          textarea="true"
+          placeholder="Text Area 1"
+          [dirty]="false"
+          (value)="text=$event">
+        </formless-input>
+        <formless-input
+          textarea="true"
+          placeholder="Text Area 2"
+          rows="7"
+          init="Lots of interesting information can be placed here!"
+          [dirty]="false"
+          (value)="moretext=$event">
         </formless-input>
       </formless-card>
       <!-- TOGGLE -->

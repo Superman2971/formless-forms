@@ -1,9 +1,10 @@
-<div class="input">
+<div class="input" [class.textarea]="textarea">
   <label [class.active]="focused || input">
     {{placeholder}}
     <span *ngIf="optional">&nbsp;(Optional)</span>
   </label>
   <input
+    *ngIf="!textarea"
     [(ngModel)]="input"
     alt="{{placeholder}} Input"
     type="{{type}}"
@@ -14,6 +15,17 @@
     [attr.maxlength]="maxlength || 200"
     [disabled]="disabled"
   />
+  <textarea
+    *ngIf="textarea"
+    [(ngModel)]="input"
+    name="{{placeholder}}"
+    rows="{{rows || 1}}"
+    (focus)="focused = true"
+    (blur)="focused = false; dirty = true"
+    (input)="sendValue(input)"
+    [attr.maxlength]="maxlength || 200"
+    [disabled]="disabled"
+  ></textarea>
   <div *ngIf="hiddenType" class="hidden-type">
     <i *ngIf="type === 'password'" class="material-icons" (click)="type = 'text'">visibility</i>
     <i *ngIf="type === 'text'" class="material-icons" (click)="type = 'password'">visibility_off</i>

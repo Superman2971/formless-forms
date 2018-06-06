@@ -18,6 +18,8 @@ export class FormlessInputComponent implements OnInit, OnChanges {
   @Input() description;
   @Output() value: EventEmitter<string> = new EventEmitter();
   @Input() disabled;
+  @Input() textarea;
+  @Input() rows;
   // ngModel for Input
   input;
   // variables

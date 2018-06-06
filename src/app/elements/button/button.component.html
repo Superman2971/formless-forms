@@ -8,4 +8,5 @@
   [style.color]="inverse ? (color ? color : '#fff') : (color ? '#fff' : 'rgba(0, 0, 0, 0.54)')">
   <i *ngIf="icon" class="material-icons">{{icon}}</i>
   <div *ngIf="text" [innerHtml]="text | uppercase"></div>
+  <ng-content></ng-content>
 </div>

@@ -42,6 +42,19 @@
     width: 100%;
   }
 
+  textarea {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 6px;
+    color: #0a2c4c;
+    font-size: 16px;
+    margin: 16px 0 0;
+    outline: none;
+    padding: 16px 32px 16px 16px;
+    text-align: left;
+    width: 100%;
+  }
+
   .validation-icon {
     position: absolute;
     right: 8px;
@@ -93,6 +106,22 @@
       max-height: 20px;
       max-width: 32px;
       min-width: 32px;
+    }
+  }
+
+  &.textarea {
+    label {
+      left: 16px;
+      top: 32px;
+
+      &.active {
+        left: 0;
+        top: 0;
+      }
+    }
+
+    .validation-icon {
+      top: 32px;
     }
   }
 }
