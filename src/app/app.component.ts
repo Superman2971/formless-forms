@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+declare var require: any;
+
 @Component({
   selector: 'formless-root',
   templateUrl: './app.component.html',
@@ -11,4 +13,5 @@ export class AppComponent {
   checkbox1: boolean = false;
   checkbox2: boolean = true;
   checkbox3: boolean = false;
+  testMd = require('raw-loader!./markdown-code-samples/test.md');
 }

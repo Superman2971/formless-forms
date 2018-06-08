@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// 3rd Party Module
+import { MarkdownModule } from 'ngx-markdown';
 // Shared Modules
 import { FormlessInputModule } from './elements/input/input.module';
 import { FormlessCardModule } from './elements/card/card.module';
@@ -15,6 +17,7 @@ import { AppComponent } from './app.component';
 @NgModule({
   imports: [
     BrowserModule,
+    MarkdownModule.forRoot(),
     FormlessInputModule,
     FormlessCardModule,
     FormlessButtonModule,

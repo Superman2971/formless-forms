@@ -15,15 +15,7 @@
   transition: 0.3s ease-in-out all;
   width: 24px;
 
-  &.colored {
-    color: #fff !important;
-
-    &.checked {
-      border-color: transparent;
-    }
-  }
-
-  i {
+  svg {
     font-size: 24px;
     opacity: 0;
     transition: 0.3s ease-in-out all;

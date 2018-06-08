@@ -26,6 +26,7 @@
       <div>
         <div class="title">Formless Forms</div>
         <div>what is formless? uhhhh Angular components.</div>
+        <markdown [data]="testMd"></markdown>
       </div>
       <!-- WHY FORMLESS? -->
       <div>
@@ -41,12 +42,12 @@
             <i class="material-icons">add</i>
             <div>BUTTON</div>
           </formless-button>
-          <formless-button icon="{{buttonIcon}}" text="{{text ? text : 'button'}}"></formless-button>
-          <formless-button icon="add" text="inverse button" inverse="true"></formless-button>
+          <formless-button text="{{text ? text : 'button'}}"><i class="material-icons">{{buttonIcon}}</i>&nbsp;</formless-button>
+          <formless-button inverse="true"><i class="material-icons">add</i> INVERSE BUTTON</formless-button>
           <formless-button text="Color Button" color="#15ca53"></formless-button>
           <formless-button text="inverse Color Button" color="#15ca53" inverse="true"></formless-button>
-          <formless-button icon="info_outline" text="{{toggle ? 'disabled' : 'enabled'}} button" [disabled]="toggle"></formless-button>
-          <formless-button icon="info_outline" text="{{toggle ? 'disabled' : 'enabled'}} inverse button" [disabled]="toggle" inverse="true"></formless-button>
+          <formless-button text="{{toggle ? 'disabled' : 'enabled'}} button" [disabled]="toggle"><i class="material-icons">info_outline</i>&nbsp;</formless-button>
+          <formless-button text="{{toggle ? 'disabled' : 'enabled'}} inverse button" [disabled]="toggle" inverse="true"><i class="material-icons">info_outline</i>&nbsp;</formless-button>
           <formless-button text="{{toggle ? 'disabled' : 'enabled'}} Color Button" color="#15ca53" [disabled]="toggle"></formless-button>
           <formless-button text="{{toggle ? 'disabled' : 'enabled'}} inverse  Color Button" color="#15ca53" [disabled]="toggle" inverse="true"></formless-button>
         </div>
@@ -189,6 +190,12 @@
           [matchThis]="email"
           [dirty]="false"
           (value)="email2=$event"
+        ></formless-input>
+        <formless-input
+          placeholder="Password"
+          hiddenType="true"
+          [dirty]="false"
+          (value)="password=$event"
         ></formless-input>
         <formless-input
           textarea="true"
