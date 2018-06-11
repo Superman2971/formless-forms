@@ -14,4 +14,8 @@ export class AppComponent {
   checkbox2: boolean = true;
   checkbox3: boolean = false;
   testMd = require('raw-loader!./markdown-code-samples/test.md');
+
+  loadFile(fileName) {
+    this.testMd = require(`raw-loader!./markdown-code-samples/${fileName}.md`);
+  }
 }
