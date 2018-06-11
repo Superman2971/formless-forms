@@ -12,6 +12,7 @@ import { FormlessCheckboxModule } from './elements/checkbox/checkbox.module';
 import { FormlessRadioModule } from './elements/radio/radio.module';
 // Components
 import { AppComponent } from './app.component';
+import { MarkdownDisplayComponent } from './markdown-display/markdown-display.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AppComponent } from './app.component';
     FormlessRadioModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    MarkdownDisplayComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

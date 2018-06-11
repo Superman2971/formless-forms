@@ -26,11 +26,6 @@
       <div>
         <div class="title">Formless Forms</div>
         <div>what is formless? uhhhh Angular components.</div>
-        <formless-card>
-          <formless-button color="#15ca53" text="BUTTON HTML" (click)="loadFile('button_html')"></formless-button>
-          <formless-button color="#15ca53" text="BUTTON TS" (click)="loadFile('button_ts')"></formless-button>
-          <markdown [data]="testMd"></markdown>
-        </formless-card>
       </div>
       <!-- WHY FORMLESS? -->
       <div>
@@ -118,6 +113,7 @@
             (value)="text=$event">
           </formless-input>
         </div>
+        <formless-markdown-display [tabs]="buttonTabs"></formless-markdown-display>
       </formless-card>
       <!-- CARD -->
       <div id="card" class="title">Card</div>

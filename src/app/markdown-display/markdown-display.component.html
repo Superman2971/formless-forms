@@ -1,0 +1,14 @@
+<div class="markdown-display">
+  <div class="tabs">
+    <div *ngFor="let tab of tabs; let i = index;">
+      <formless-button
+        color="#ADD8E6"
+        [inverse]="tab.active ? false : true"
+        [disabled]="tab.active"
+        [text]="tab.text"
+        (click)="updateDisplay(i)"
+      ></formless-button>
+    </div>
+  </div>
+  <markdown [data]="markdown"></markdown>
+</div>
