@@ -198,6 +198,11 @@
           (value)="password=$event"
         ></formless-input>
         <formless-input
+          init="Custom Styled Input"
+          [optionalStyles]="{'min-height': 0}"
+          [inputStyles]="{'border': '1px solid #D5DAE5',	'border-radius': '2px', 'font-size': '12px',	'font-weight': '500', 'height': '36px', 'margin': 0, 'padding': '0 0 0 16px'}"
+        ></formless-input>
+        <formless-input
           textarea="true"
           placeholder="Text Area 1"
           [dirty]="false"

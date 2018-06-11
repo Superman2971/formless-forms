@@ -23,6 +23,8 @@ export class FormlessInputComponent implements OnInit, OnChanges {
   @Input() matchThis;
   @Input() regex;
   @Input() regexMessage;
+  @Input() optionalStyles;
+  @Input() inputStyles;
   // ngModel for Input
   input;
   // variables
