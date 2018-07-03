@@ -8,21 +8,5 @@ declare var require: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  toggle1: boolean = false;
-  toggle2: boolean = true;
-  checkbox1: boolean = false;
-  checkbox2: boolean = true;
-  checkbox3: boolean = false;
-  testMd = require('raw-loader!./markdown-code-samples/test.md');
-  buttonTabs = [{
-    text: 'HTML',
-    value: 'button_html'
-  }, {
-    text: 'COMPONENT',
-    value: 'button_ts'
-  }];
-
-  loadFile(fileName) {
-    this.testMd = require(`raw-loader!./markdown-code-samples/${fileName}.md`);
-  }
+  constructor() {}
 }

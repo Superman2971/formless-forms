@@ -1,0 +1,55 @@
+<div class="input">
+  <div id="input" class="title">Input</div>
+  <formless-card>
+    <div>Input Results: {{name}} {{email}} {{email2}} {{text}} {{moretext}} {{phone}}</div>
+    <formless-input
+      placeholder="Name"
+      init="Ian Gold"
+      [dirty]="false"
+      (value)="name=$event"
+    ></formless-input>
+    <formless-input
+      placeholder="Email Address"
+      email="true"
+      [dirty]="false"
+      (value)="email=$event"
+    ></formless-input>
+    <formless-input
+      placeholder="Email Address Again"
+      [matchThis]="email"
+      [dirty]="false"
+      (value)="email2=$event"
+    ></formless-input>
+    <formless-input
+      placeholder="Password"
+      hiddenType="true"
+      [dirty]="false"
+      (value)="password=$event"
+    ></formless-input>
+    <formless-input
+      init="Custom Styled Input"
+      [optionalStyles]="{'min-height': 0}"
+      [inputStyles]="{'border': '1px solid #D5DAE5',	'border-radius': '2px', 'font-size': '12px',	'font-weight': '500', 'height': '36px', 'margin': 0, 'padding': '0 0 0 16px'}"
+    ></formless-input>
+    <formless-input
+      textarea="true"
+      placeholder="Text Area 1"
+      [dirty]="false"
+      (value)="text=$event"
+    ></formless-input>
+    <formless-input
+      textarea="true"
+      placeholder="Text Area 2"
+      rows="7"
+      init="Lots of interesting information can be placed here!"
+      [dirty]="false"
+      (value)="moretext=$event"
+    ></formless-input>
+    <formless-input
+      placeholder="Phone Custom Regex"
+      regex="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+      regexMessage="does not match the pattern for a phone number"
+      (value)="phone=$event"
+    ></formless-input>
+  </formless-card>
+</div>

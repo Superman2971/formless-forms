@@ -1,0 +1,84 @@
+<div class="button">
+  <!-- BUTTON -->
+  <div id="button" class="title">Button</div>
+  <formless-card>
+    <div class="row">
+      <formless-button [disabled]="toggle" color="#15ca53" inverse="true">
+        <i class="material-icons">add</i>
+        <div>BUTTON</div>
+      </formless-button>
+      <formless-button text="{{text ? text : 'button'}}"><i class="material-icons">{{buttonIcon}}</i>&nbsp;</formless-button>
+      <formless-button inverse="true"><i class="material-icons">add</i> INVERSE BUTTON</formless-button>
+      <formless-button text="Color Button" color="#15ca53"></formless-button>
+      <formless-button text="inverse Color Button" color="#15ca53" inverse="true"></formless-button>
+      <formless-button text="{{toggle ? 'disabled' : 'enabled'}} button" [disabled]="toggle"><i class="material-icons">info_outline</i>&nbsp;</formless-button>
+      <formless-button text="{{toggle ? 'disabled' : 'enabled'}} inverse button" [disabled]="toggle" inverse="true"><i class="material-icons">info_outline</i>&nbsp;</formless-button>
+      <formless-button text="{{toggle ? 'disabled' : 'enabled'}} Color Button" color="#15ca53" [disabled]="toggle"></formless-button>
+      <formless-button text="{{toggle ? 'disabled' : 'enabled'}} inverse  Color Button" color="#15ca53" [disabled]="toggle" inverse="true"></formless-button>
+    </div>
+    <div class="row margin-top">
+      <formless-toggle (change)="toggle=$event"></formless-toggle>
+      <div>Disable Buttons: {{toggle}}</div>
+      <formless-radio
+        value=""
+        [groupValue]="buttonIcon"
+        color="#15ca53"
+        circle="true"
+        size="24"
+        checked="true"
+        (change)="buttonIcon=$event">
+        No Icon
+      </formless-radio>
+      <formless-radio
+        value="add"
+        [groupValue]="buttonIcon"
+        color="#15ca53"
+        circle="true"
+        size="24"
+        (change)="buttonIcon=$event">
+        Add Icon
+      </formless-radio>
+      <formless-radio
+        value="email"
+        [groupValue]="buttonIcon"
+        color="#15ca53"
+        circle="true"
+        size="24"
+        (change)="buttonIcon=$event">
+        Email Icon
+      </formless-radio>
+      <formless-radio
+        value="info_outline"
+        [groupValue]="buttonIcon"
+        color="#15ca53"
+        circle="true"
+        size="24"
+        (change)="buttonIcon=$event">
+        Info Icon
+      </formless-radio>
+      <!-- <div>
+        <span>Email Icon:</span>
+        <formless-checkbox
+          (change)="icon=($event ? 'email' : '')"
+        ></formless-checkbox>
+      </div>
+      <div>
+        <span>Add Icon:</span>
+        <formless-checkbox
+          (change)="icon=($event ? 'add' : '')"
+        ></formless-checkbox>
+      </div>
+      <div>
+        <span>Info Icon:</span>
+        <formless-checkbox
+          (change)="icon=($event ? 'info_outline' : '')"
+        ></formless-checkbox>
+      </div> -->
+      <formless-input
+        placeholder="Button Text"
+        (value)="text=$event">
+      </formless-input>
+    </div>
+    <formless-markdown-display [tabs]="buttonTabs"></formless-markdown-display>
+  </formless-card>
+</div>

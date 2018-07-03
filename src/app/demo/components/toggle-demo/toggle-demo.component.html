@@ -1,0 +1,11 @@
+<div class="toggle">
+  <div id="toggle" class="title">Toggle</div>
+  <formless-card>
+    <div class="row">
+      <formless-toggle (change)="toggle1=$event"></formless-toggle>
+      <div>Toggle 1: {{toggle1}}</div>
+      <formless-toggle checked="true" (change)="toggle2=$event"></formless-toggle>
+      <div>Toggle 2: {{toggle2}}</div>
+    </div>
+  </formless-card>
+</div>
