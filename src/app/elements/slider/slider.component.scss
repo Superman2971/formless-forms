@@ -58,6 +58,7 @@
     }
 
     &::-moz-range-track {
+      background-color: transparent;
       @include track;
     }
 

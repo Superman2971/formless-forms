@@ -26,7 +26,7 @@ export class FormlessSliderComponent implements OnInit {
 
   update(evt?) {
     if (evt) {
-      this.currentValue = evt.srcElement.value;
+      this.currentValue = evt.target.value || evt.srcElement.value;
     } else {
       this.currentValue = this.init || (this.max / 2);
     }
