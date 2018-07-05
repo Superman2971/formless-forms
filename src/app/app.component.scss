@@ -54,12 +54,13 @@
       display: flex;
       flex-direction: column;
       left: 0;
+      max-height: calc(100vh - 44px);
       min-height: calc(100vh - 44px);
       min-width: 300px;
-      overflow: hidden;
+      overflow: auto;
       position: fixed;
       top: 44px;
-      transition: 0.5s;
+      transition: transform 0.5s;
       z-index: 1;
 
       @media (max-width: 980px) {
