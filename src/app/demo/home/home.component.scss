@@ -18,5 +18,13 @@
     display: grid;
     grid-gap: 24px;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pad-bottom {
+    padding: 0 0 24px;
   }
 }
