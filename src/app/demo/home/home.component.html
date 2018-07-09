@@ -10,6 +10,60 @@
     <div>let me explain why formless forms over template forms, angular/reactive/dynamic forms?</div>
     <div>These components were built to be simple. You can read and duplicate the code without much effort and it should allow you to do a lot of customization for your forms. The objective is to simplify components, forms, and minimize code.</div>
   </div>
+  <!-- EXAMPLE FORM -->
+  <div>
+    <div class="title">Example Form</div>
+    <formless-card>
+      <formless-input
+        placeholder="Full Name"
+        [dirty]="dirty"
+        (value)="name=$event"
+      ></formless-input>
+      <formless-input
+        placeholder="Email Address"
+        email="true"
+        [dirty]="dirty"
+        (value)="email=$event"
+      ></formless-input>
+      <formless-toggle (change)="toggle1=$event"></formless-toggle>
+      <formless-slider
+        [leftColor]="'#ffa000'"
+        [rightColor]="'#000'"
+        (updated)="slider1=$event"
+      ></formless-slider>
+      <div class="row">
+        <formless-radio
+          value="first"
+          [groupValue]="radio1"
+          circle="true"
+          color="#ffa000"
+          (change)="radio1=$event">
+          option 1
+        </formless-radio>
+        <formless-radio
+          value="second"
+          [groupValue]="radio1"
+          circle="true"
+          color="#ffa000"
+          left="true"
+          (change)="radio1=$event">
+          option 2
+        </formless-radio>
+      </div>
+      <div class="flex-row">
+        <formless-checkbox
+          [checked]="acceptedTerms"
+          color="#ffa000"
+          (change)="acceptedTerms=$event"
+        ></formless-checkbox>
+        <div>Accept the terms of service</div>
+      </div>
+      <div class="row">
+        <formless-button text="Cancel" color="#ffa000" inverse="true"></formless-button>
+        <formless-button text="Submit" color="#ffa000" (click)="dirty = true;"></formless-button>
+      </div>
+    </formless-card>
+  </div>
   <!-- ADDITIONAL INFORMATION -->
   <div>
     <div class="title">Additional Information</div>
