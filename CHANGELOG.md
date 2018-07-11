@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# 0.5.0 (2018-06-1)
+
+A lot of work on the demo site and some package updates
+
+### Updates
+
+* `FormlessButtonComponent` additions:
+  * Small wrap adjustment so it no longer is forced white-space: nowrap.
+* `FormlessRadioComponent` additions:
+  * Removed the requirement for a groupValue on updates, this way we can dynamically remove the value from the radio group from the parent component.
+* `FormlessSlideComponent` additions:
+  * Changed init, rather than currentValue, to manage the slider value allowing dynamic changes of the slider from the parent component.
+* Completed routes for demo components and finished the home page with sample form.
+
 # 0.4.0 (2018-06-1)
 
 A lot of work on the demo site and some package updates
