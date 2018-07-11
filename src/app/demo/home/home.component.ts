@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+declare var require: any;
+
 @Component({
   selector: 'formless-home',
   templateUrl: './home.component.html',
@@ -15,8 +17,24 @@ export class HomeComponent {
     score: 100
   };
   dirty: boolean = false;
+  // home form code
+  homeForm = [{
+    text: 'HTML',
+    value: 'form_html'
+  }, {
+    text: 'SCSS',
+    value: 'form_scss'
+  }, {
+    text: 'COMPONENT',
+    value: 'form_ts'
+  }];
+  npmCode;
+  importCode;
 
-  constructor() {}
+  constructor() {
+    this.npmCode = require(`raw-loader!../markdown-code-samples/npm_code.md`);
+    this.importCode = require(`raw-loader!../markdown-code-samples/import_code.md`);
+  }
 
   clear() {
     this.form = {

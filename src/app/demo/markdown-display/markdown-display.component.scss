@@ -5,10 +5,11 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+    flex-flow: wrap;
     justify-content: flex-start;
 
     div {
-      margin: 0 16px 0 0;
+      margin: 0 16px 16px 0;
       min-width: 120px;
     }
   }

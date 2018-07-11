@@ -9,12 +9,13 @@ declare var require: any;
 })
 export class MarkdownDisplayComponent implements OnInit {
   @Input() tabs;
+  @Input() startClosed: boolean = false;
   markdown;
 
   constructor() {}
 
   ngOnInit() {
-    if (this.tabs) {
+    if (this.tabs && !this.startClosed) {
       this.updateDisplay(0);
     }
   }

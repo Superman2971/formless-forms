@@ -1,7 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, SimpleChange } from '@angular/core';
 
-const noop = () => { };
-
 @Component({
   selector: 'formless-radio',
   templateUrl: './radio.component.html',
@@ -21,7 +19,7 @@ export class FormlessRadioComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     const groupValue: SimpleChange = changes.groupValue;
-    if (groupValue && (groupValue.currentValue || groupValue.currentValue === '')) {
+    if (groupValue) {
       if (this.value !== groupValue.currentValue) {
         this.checked = false;
       } else {
