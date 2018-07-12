@@ -1,24 +1,32 @@
 <div class="button">
   <!-- BUTTON -->
-  <div id="button" class="title">Button</div>
+  <div id="button" class="heading">Button</div>
   <formless-card>
+    <div class="margin-bottom title">Standard Buttons</div>
     <div class="row">
-      <formless-button [disabled]="toggle" color="#15ca53" inverse="true">
-        <i class="material-icons">add</i>
-        <div>BUTTON</div>
+      <formless-button [text]="'Click'"></formless-button>
+      <formless-button [text]="'Click'" [inverse]="true"></formless-button>
+      <formless-button [text]="'Click'" [color]="'#15ca53'"></formless-button>
+      <formless-button [text]="'Click'" [color]="'#15ca53'" [inverse]="true"></formless-button>
+    </div>
+    <div class="margin-top margin-bottom title">Disabled Buttons</div>
+    <div class="row">
+      <formless-button [text]="'Click'" [disabled]="true"></formless-button>
+      <formless-button [text]="'Click'" [inverse]="true" [disabled]="true"></formless-button>
+      <formless-button [text]="'Click'" [color]="'#15ca53'" [disabled]="true"></formless-button>
+      <formless-button [text]="'Click'" [color]="'#15ca53'" [inverse]="true" [disabled]="true"></formless-button>
+    </div>
+    <div class="margin-top title">Custom/Dynamic Interior Buttons</div>
+    <div class="margin-bottom">(component uses ng-context)</div>
+    <div class="row">
+      <formless-button [color]="'#15ca53'" [inverse]="inverse" [disabled]="disabled">
+        <i class="material-icons">{{buttonIcon}}</i>&nbsp;<div [innerHtml]="text ? text : 'DYNAMIC BUTTON'"></div>
       </formless-button>
-      <formless-button text="{{text ? text : 'button'}}"><i class="material-icons">{{buttonIcon}}</i>&nbsp;</formless-button>
-      <formless-button inverse="true"><i class="material-icons">add</i> INVERSE BUTTON</formless-button>
-      <formless-button text="Color Button" color="#15ca53"></formless-button>
-      <formless-button text="inverse Color Button" color="#15ca53" inverse="true"></formless-button>
-      <formless-button text="{{toggle ? 'disabled' : 'enabled'}} button" [disabled]="toggle"><i class="material-icons">info_outline</i>&nbsp;</formless-button>
-      <formless-button text="{{toggle ? 'disabled' : 'enabled'}} inverse button" [disabled]="toggle" inverse="true"><i class="material-icons">info_outline</i>&nbsp;</formless-button>
-      <formless-button text="{{toggle ? 'disabled' : 'enabled'}} Color Button" color="#15ca53" [disabled]="toggle"></formless-button>
-      <formless-button text="{{toggle ? 'disabled' : 'enabled'}} inverse  Color Button" color="#15ca53" [disabled]="toggle" inverse="true"></formless-button>
+      <formless-input [placeholder]="'Button Text'" (value)="text=$event"></formless-input>
+      <div>Inverse: <formless-toggle (change)="inverse=$event"></formless-toggle></div>
+      <div>Disabled: <formless-toggle (change)="disabled=$event"></formless-toggle></div>
     </div>
     <div class="row margin-top">
-      <formless-toggle (change)="toggle=$event"></formless-toggle>
-      <div>Disable Buttons: {{toggle}}</div>
       <formless-radio
         value=""
         [groupValue]="buttonIcon"
@@ -56,29 +64,15 @@
         (change)="buttonIcon=$event">
         Info Icon
       </formless-radio>
-      <!-- <div>
-        <span>Email Icon:</span>
-        <formless-checkbox
-          (change)="icon=($event ? 'email' : '')"
-        ></formless-checkbox>
-      </div>
-      <div>
-        <span>Add Icon:</span>
-        <formless-checkbox
-          (change)="icon=($event ? 'add' : '')"
-        ></formless-checkbox>
-      </div>
-      <div>
-        <span>Info Icon:</span>
-        <formless-checkbox
-          (change)="icon=($event ? 'info_outline' : '')"
-        ></formless-checkbox>
-      </div> -->
-      <formless-input
-        placeholder="Button Text"
-        (value)="text=$event">
-      </formless-input>
     </div>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
     <formless-markdown-display [tabs]="buttonTabs"></formless-markdown-display>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
+    <div class="title margin-bottom">Properties</div>
+    <formless-properties-display [properties]="properties"></formless-properties-display>
   </formless-card>
 </div>

@@ -9,9 +9,28 @@ export class ButtonDemoComponent {
   buttonTabs = [{
     text: 'HTML',
     value: 'button_html'
+  }];
+
+  properties = [{
+    name: 'text',
+    type: 'string',
+    default: 'null',
+    description: 'Optionally input text using input instead of ng-context. This string will be piped to uppercase.'
   }, {
-    text: 'COMPONENT',
-    value: 'button_ts'
+    name: 'color',
+    type: 'string',
+    default: 'null',
+    description: 'Optionally define a color for the button background.'
+  }, {
+    name: 'disabled',
+    type: 'boolean',
+    default: 'false',
+    description: 'When true button events are disabled.'
+  }, {
+    name: 'inverse',
+    type: 'boolean',
+    default: 'false',
+    description: 'When true button background and text color will inverse.'
   }];
 
   constructor() {}

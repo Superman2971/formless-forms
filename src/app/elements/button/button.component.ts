@@ -7,9 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class FormlessButtonComponent {
   @Input() text: string;
-  @Input() disabled: boolean;
+  @Input() disabled: boolean = false;
   @Input() color: string;
-  @Input() inverse: boolean;
+  @Input() inverse: boolean = false;
 
   constructor() {}
 

@@ -14,6 +14,7 @@ import { FormlessRadioModule } from './elements/radio/radio.module';
 // Components
 import { AppComponent } from './app.component';
 import { MarkdownDisplayComponent } from './demo/markdown-display/markdown-display.component';
+import { PropertiesDisplayComponent } from './demo/properties-display/properties-display.component';
 import { HomeComponent } from './demo/home/home.component';
 import { ComponentsComponent } from './demo/components/components.component';
 import { ButtonDemoComponent } from './demo/components/button-demo/button-demo.component';
@@ -76,6 +77,7 @@ const appRoutes: Routes = [{
   declarations: [
     AppComponent,
     MarkdownDisplayComponent,
+    PropertiesDisplayComponent,
     HomeComponent,
     ComponentsComponent,
     ButtonDemoComponent,

@@ -1,6 +1,5 @@
 ``` html
 <div class="sample-form">
-  <div class="title">Sample Form</div>
   <formless-card>
     <formless-input
       placeholder="Full Name"

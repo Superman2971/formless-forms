@@ -1,0 +1,14 @@
+<div class="properties-display">
+  <div class="row header">
+    <div>Name</div>
+    <div>Type</div>
+    <div>Default</div>
+    <div>Description</div>
+  </div>
+  <div class="row" [class.even]="i%2===0" *ngFor="let property of properties; let i = index;">
+    <div [innerHtml]="property.name"></div>
+    <div [innerHtml]="property.type"></div>
+    <div [innerHtml]="property.default"></div>
+    <div [innerHtml]="property.description"></div>
+  </div>
+</div>

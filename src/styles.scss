@@ -40,16 +40,24 @@ a {
 body {
   background-color: rgba(0, 0, 0, 0.03);
 
-  .title {
+  .heading {
     border-bottom: 1px solid rgba(0, 0, 0, 0.24);
     font-size: 32px;
     margin: 24px 0;
+  }
+
+  .title {
+    font-size: 24px;
   }
 
   .row {
     display: grid;
     grid-gap: 24px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .margin-bottom {
+    margin-bottom: 24px;
   }
 
   .margin-top {
