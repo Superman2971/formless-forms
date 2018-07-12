@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-demo.component.scss']
 })
 export class CardDemoComponent {
+  codeTabs = [{
+    text: 'HTML',
+    value: 'card_html'
+  }];
+
   constructor() {}
 }

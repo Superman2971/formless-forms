@@ -6,11 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./button-demo.component.scss']
 })
 export class ButtonDemoComponent {
+  clicks: number = 0;
   buttonTabs = [{
     text: 'HTML',
     value: 'button_html'
+  }, {
+    text: 'COMPONENT',
+    value: 'button_ts'
   }];
-
   properties = [{
     name: 'text',
     type: 'string',
@@ -34,4 +37,8 @@ export class ButtonDemoComponent {
   }];
 
   constructor() {}
+
+  click() {
+    this.clicks++;
+  }
 }
