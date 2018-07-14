@@ -27,7 +27,17 @@
         (change)="radio1=$event">
         something biggest
       </formless-radio>
-      <div>radio 1: {{radio1}}</div>
     </div>
+    <div style="margin: 24px 0 0;"></div>
+    <div>radio 1: {{radio1}}</div>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
+    <formless-markdown-display [tabs]="code"></formless-markdown-display>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
+    <div class="title margin-bottom">Properties</div>
+    <formless-properties-display [properties]="properties"></formless-properties-display>
   </formless-card>
 </div>

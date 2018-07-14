@@ -11,12 +11,22 @@
       [leftColor]="'rgba(0, 0, 0, 0.87)'"
       [rightColor]="'green'"
       [tooltip]="'tooltip information'"
-      [tooltipColor]="'red'"
+      [tooltipColor]="'#ff0000'"
       (updated)="slider2=$event"
     ></formless-slider>
+    <div style="margin: 24px 0 0;"></div>
     <div class="row">
       <div>Slider #1: {{slider1}}</div>
       <div>Slider #2: {{slider2}}</div>
     </div>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
+    <formless-markdown-display [tabs]="code"></formless-markdown-display>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
+    <div class="title margin-bottom">Properties</div>
+    <formless-properties-display [properties]="properties"></formless-properties-display>
   </formless-card>
 </div>

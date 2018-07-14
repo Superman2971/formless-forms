@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, SimpleChange } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges, SimpleChange } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -6,19 +6,25 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })
-export class FormlessSliderComponent implements OnChanges {
-  @Input() init;
-  @Input() min = 1;
-  @Input() max = 100;
-  @Input() tooltip;
+export class FormlessSliderComponent implements OnInit, OnChanges {
+  @Input() init: number;
+  @Input() min: number = 1;
+  @Input() max: number = 100;
+  @Input() tooltip: string;
   @Input() leftColor: string = '#2275c3';
   @Input() rightColor: string = '#d5dae5';
   @Input() tooltipColor: string = '#2275c3';
   @Output() updated = new EventEmitter<number>();
   background: any;
-  currentValue;
+  currentValue: number;
 
   constructor(private sanitize: DomSanitizer) {}
+
+  ngOnInit() {
+    if (!this.init) {
+      this.update();
+    }
+  }
 
   ngOnChanges(changes: SimpleChanges) {
     const init: SimpleChange = changes.init;
