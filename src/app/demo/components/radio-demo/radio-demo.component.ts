@@ -6,59 +6,67 @@ import { Component } from '@angular/core';
   styleUrls: ['./radio-demo.component.scss']
 })
 export class RadioDemoComponent {
+  radio2 = 'circle';
+  radioButtons: Array<any> = [{
+    value: {test: 'object'},
+    text: 'Object'
+  }, {
+    value: 'string',
+    text: 'String'
+  }, {
+    value: 123,
+    text: 'Number'
+  }, {
+    value: null,
+    text: 'Null'
+  }, {
+    text: 'Undefined'
+  }, {
+    text: 'Duplicate Value (undefined)'
+  }];
   code = [{
     text: 'HTML',
     value: 'radio_html'
+  }, {
+    text: 'COMPONENT',
+    value: 'radio_ts'
   }];
   properties = [{
     name: 'value',
-    type: '???',
+    type: 'any',
     default: 'null',
-    description: ''
+    description: 'Can be any value type: object, string, number, boolean, null, undefined. '
   }, {
     name: 'groupValue',
-    type: '???',
+    type: 'any',
     default: 'null',
-    description: ''
-  }, {
-    name: 'checked',
-    type: 'boolean',
-    default: 'false',
-    description: ''
+    description: 'This a variable or set value that will define which radio button is active.'
   }, {
     name: 'circle',
     type: 'boolean',
     default: 'false',
-    description: ''
+    description: 'When true the radio is changed from a square to a circle of the same diameter as the size.'
   }, {
     name: 'left',
     type: 'boolean',
     default: 'false',
-    description: ''
+    description: 'When true the ng-content will be displayed on the left of any ng-content.'
   }, {
     name: 'color',
     type: 'string',
     default: 'rgba(0, 0, 0, 0.87)',
-    description: ''
+    description: 'Optionally set the color for the radio button.'
   }, {
     name: 'size',
     type: 'number',
     default: '16',
-    description: ''
+    description: 'Optionally set the pixel dimensions for the radio button.'
   }, {
     name: 'change',
     type: 'event',
     default: '-',
-    description: 'When toggled the component will emit an event. The event is type any????.'
+    description: 'When radio is clicked the component will emit an event.'
   }];
-  // @Input() value: any;
-  // @Input() groupValue: any;
-  // @Input() checked: boolean = false;
-  // @Input() circle: boolean = false;
-  // @Input() left: boolean = false;
-  // @Input() color: string = 'rgba(0, 0, 0, 0.87)';
-  // @Input() size: number = 16;
-  // @Output() change: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
 }

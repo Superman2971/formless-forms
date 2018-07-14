@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# 1.0.0 (2018-07-??)
+
+COMPLETED DEMO SITE AND MADE SMALL CORRECTIONS TO PROPERTIES OF THE COMPONENTS
+
 # 0.5.0 (2018-06-1)
 
 A lot of work on the demo site and some package updates
@@ -27,7 +31,7 @@ A lot of work on the demo site and some package updates
   * Custom regex validation
   * Match-this validation (primarily for password or email matching)
 * Create customer markdown displays for the demo site, still needs some styling.
-* `Button Component` changed to no longer accept icons, but will allow anything through ng-context
+* `Button Component` changed to no longer accept icons, but will allow anything through ng-content
 
 # 0.3.0 (2018-05-26)
 

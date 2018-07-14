@@ -1,35 +1,41 @@
 <div class="radio">
   <div id="radio" class="heading">Radio</div>
   <formless-card>
+    <div class="title">Standard Radio</div>
+    <div style="margin: 24px 0 0;"></div>
     <div class="row">
-      <formless-radio
-        value="first"
-        [groupValue]="radio1"
-        color="#15ca53"
-        circle="true"
-        (change)="radio1=$event">
-        something big
-      </formless-radio>
-      <formless-radio
-        value="second"
-        [groupValue]="radio1"
-        color="#15ca53"
-        left="true"
-        size="32"
-        (change)="radio1=$event">
-        something bigger
-      </formless-radio>
-      <formless-radio
-        value="third"
-        [groupValue]="radio1"
-        [checked]="true"
-        circle="true"
-        (change)="radio1=$event">
-        something biggest
+      <formless-radio [value]="true" [groupValue]="radio1" (change)="radio1=$event">true</formless-radio>
+      <formless-radio [value]="false" [groupValue]="radio1" (change)="radio1=$event">false</formless-radio>
+    </div>
+    <div style="margin: 24px 0 0;"></div>
+    <div class="title">Styled Radio</div>
+    <div>Square or circle, sizing, color choice and optionally place the ng-content on right or left of the radio button.</div>
+    <div style="margin: 24px 0 0;"></div>
+    <div class="row">
+      <formless-radio [value]="'circle'" [groupValue]="radio2" [circle]="true" (change)="radio2=$event">Circle</formless-radio>
+      <formless-radio [value]="'color'" [groupValue]="radio2" [color]="'#15ca53'" (change)="radio2=$event">Color</formless-radio>
+      <formless-radio [value]="'sizing'" [groupValue]="radio2" [size]="32" (change)="radio2=$event">Sizing</formless-radio>
+      <formless-radio [value]="'text on left'" [groupValue]="radio2" [left]="true" (change)="radio2=$event">Text on left</formless-radio>
+    </div>
+    <div style="margin: 24px 0 0;"></div>
+    <div class="title">Dynamic/Flexible Radio Values</div>
+    <div>Can optionally use *ngFor to dynamically set radio group. Flexible value types can be used for any radio group.</div>
+    <div style="margin: 24px 0 0;"></div>
+    <div class="row">
+      <formless-radio *ngFor="let radio of radioButtons"
+        [value]="radio.value"
+        [groupValue]="radio3"
+        [color]="'#ffa000'"
+        (change)="radio3=$event">
+        <div [innerHtml]="radio.text"></div>
       </formless-radio>
     </div>
     <div style="margin: 24px 0 0;"></div>
-    <div>radio 1: {{radio1}}</div>
+    <div class="row">
+      <div class="title">Standard Radio: {{radio1}}</div>
+      <div class="title">Styled Radio: {{radio2}}</div>
+      <div class="title">Dynamic Radio: {{radio3 | json}}</div>
+    </div>
   </formless-card>
   <div style="margin: 24px 0 0;"></div>
   <formless-card>

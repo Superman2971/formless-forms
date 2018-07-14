@@ -8,12 +8,12 @@ import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, Simpl
 export class FormlessRadioComponent implements OnChanges {
   @Input() value: any;
   @Input() groupValue: any;
-  @Input() checked: boolean = false;
   @Input() circle: boolean = false;
   @Input() left: boolean = false;
   @Input() color: string = 'rgba(0, 0, 0, 0.87)';
   @Input() size: number = 16;
   @Output() change: EventEmitter<any> = new EventEmitter<any>();
+  checked: boolean = false;
 
   constructor() {}
 

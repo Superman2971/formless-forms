@@ -17,7 +17,7 @@
       <formless-button [text]="'Click'" [color]="'#15ca53'" [inverse]="true" [disabled]="true" (click)="click()"></formless-button>
     </div>
     <div class="margin-top title">Custom/Dynamic Interior Buttons</div>
-    <div class="margin-bottom">(component uses ng-context)</div>
+    <div class="margin-bottom">(component uses ng-content)</div>
     <div class="row">
       <formless-button [color]="'#15ca53'" [inverse]="inverse" [disabled]="disabled" (click)="click()">
         <i class="material-icons">{{buttonIcon}}</i>&nbsp;<div [innerHtml]="text ? text : 'DYNAMIC BUTTON'"></div>

@@ -19,7 +19,7 @@ export class ButtonDemoComponent {
     name: 'text',
     type: 'string',
     default: 'null',
-    description: 'Optionally input text using input instead of ng-context. This string will be piped to uppercase.'
+    description: 'Optionally input text using input instead of ng-content. This string will be piped to uppercase.'
   }, {
     name: 'color',
     type: 'string',
