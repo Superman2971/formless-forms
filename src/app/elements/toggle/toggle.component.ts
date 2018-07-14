@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./toggle.component.scss']
 })
 export class FormlessToggleComponent {
-  @Input() checked;
+  @Input() checked: boolean = false;
   @Output() change = new EventEmitter<boolean>();
   constructor() {}
 

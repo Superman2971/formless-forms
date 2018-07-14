@@ -3,9 +3,21 @@
   <formless-card>
     <div class="row">
       <formless-toggle (change)="toggle1=$event"></formless-toggle>
-      <div>Toggle 1: {{toggle1}}</div>
       <formless-toggle checked="true" (change)="toggle2=$event"></formless-toggle>
+    </div>
+    <div style="margin: 24px 0 0;"></div>
+    <div class="row">
+      <div>Toggle 1: {{toggle1}}</div>
       <div>Toggle 2: {{toggle2}}</div>
     </div>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
+    <formless-markdown-display [tabs]="code"></formless-markdown-display>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
+    <div class="title margin-bottom">Properties</div>
+    <formless-properties-display [properties]="properties"></formless-properties-display>
   </formless-card>
 </div>

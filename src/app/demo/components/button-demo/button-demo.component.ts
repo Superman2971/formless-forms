@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ButtonDemoComponent {
   clicks: number = 0;
+  buttonIcon: string = '';
   buttonTabs = [{
     text: 'HTML',
     value: 'button_html'

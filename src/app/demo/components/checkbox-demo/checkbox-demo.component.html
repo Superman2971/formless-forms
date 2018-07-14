@@ -2,29 +2,25 @@
   <!-- CHECKBOX -->
   <div id="checkbox" class="heading">Checkbox</div>
   <formless-card>
-    <formless-checkbox
-      (change)="checkbox1=$event"
-    ></formless-checkbox>
-    <div style="padding: 24px 0 0;">
-      <formless-checkbox
-        [checked]="checkbox2"
-        color="#ffa000"
-        size="36"
-        (change)="checkbox2=$event"
-      ></formless-checkbox>
+    <div class="row">
+      <formless-checkbox (change)="checkbox1=$event"></formless-checkbox>
+      <formless-checkbox [checked]="checkbox2" color="#ffa000" size="36" (change)="checkbox2=$event"></formless-checkbox>
+      <formless-checkbox [checked]="checkbox3" color="#15ca53" size="16" (change)="checkbox3=$event"></formless-checkbox>
     </div>
-    <div style="padding: 24px 0;">
-      <formless-checkbox
-        [checked]="checkbox3"
-        color="#15ca53"
-        size="16"
-        (change)="checkbox3=$event"
-      ></formless-checkbox>
-    </div>
+    <div style="margin: 24px 0 0;"></div>
     <div class="row">
       <div>checkbox #1: {{checkbox1}}</div>
       <div>checkbox #2: {{checkbox2}}</div>
       <div>checkbox #3: {{checkbox3}}</div>
     </div>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
+    <formless-markdown-display [tabs]="code"></formless-markdown-display>
+  </formless-card>
+  <div style="margin: 24px 0 0;"></div>
+  <formless-card>
+    <div class="title margin-bottom">Properties</div>
+    <formless-properties-display [properties]="properties"></formless-properties-display>
   </formless-card>
 </div>
