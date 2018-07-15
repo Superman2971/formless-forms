@@ -12,7 +12,7 @@
     (focus)="focused = true"
     (blur)="focused = false; dirty = true"
     (input)="sendValue(input)"
-    [attr.maxlength]="maxlength || 200"
+    [attr.maxlength]="maxlength"
     [disabled]="disabled"
     [ngStyle]="inputStyles"
   />
@@ -24,7 +24,7 @@
     (focus)="focused = true"
     (blur)="focused = false; dirty = true"
     (input)="sendValue(input)"
-    [attr.maxlength]="maxlength || 200"
+    [attr.maxlength]="maxlength"
     [disabled]="disabled"
   ></textarea>
   <div *ngIf="hiddenType" class="hidden-type">

@@ -6,25 +6,25 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChange
   styleUrls: ['./input.component.scss']
 })
 export class FormlessInputComponent implements OnInit, OnChanges {
-  @Input() placeholder;
-  @Input() init;
-  @Input() dirty;
-  @Input() optional;
-  @Input() email;
-  @Input() hiddenType;
-  @Input() numberType;
-  @Input() minlength;
-  @Input() maxlength;
-  @Input() description;
+  @Input() placeholder: string;
+  @Input() init: string;
+  @Input() dirty: boolean = false;
+  @Input() optional: boolean = false;
+  @Input() email: boolean = false;
+  @Input() hiddenType: boolean = false;
+  @Input() numberType: boolean = false;
+  @Input() minlength: number;
+  @Input() maxlength: number = 200;
+  @Input() description: string;
   @Output() value: EventEmitter<string> = new EventEmitter();
-  @Input() disabled;
-  @Input() textarea;
-  @Input() rows;
-  @Input() matchThis;
-  @Input() regex;
-  @Input() regexMessage;
-  @Input() optionalStyles;
-  @Input() inputStyles;
+  @Input() disabled: boolean = false;
+  @Input() textarea: boolean = false;
+  @Input() rows: number;
+  @Input() matchThis: string;
+  @Input() regex: string;
+  @Input() regexMessage: string;
+  @Input() optionalStyles: string;
+  @Input() inputStyles: string;
   // ngModel for Input
   input;
   // variables

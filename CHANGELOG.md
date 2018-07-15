@@ -4,7 +4,26 @@ All notable changes to this project will be documented in this file. See [standa
 
 # 1.0.0 (2018-07-??)
 
-COMPLETED DEMO SITE AND MADE SMALL CORRECTIONS TO PROPERTIES OF THE COMPONENTS
+Completed the demo site, browser compatibility of the components, and small adjustments to component properties.
+
+* `FormlessButtonComponent` additions:
+  * Removed white-space nowrap and set height to 100% so it's size will fit the space made available for it
+  * Set initial values for the boolean inputs to false
+* `FormlessCheckboxComponent` additions:
+  * Set initial values for the Inputs
+* `FormlessInputComponent` additions:
+  * Custom styles for the input and 'optional' text
+  * Set types for all inputs
+* `FormlessRadioComponent` additions:
+  * Added min-height and min-width to ensure the radio size does not squish.
+  * Removed unecessary value checking on changes
+* `FormlessSliderComponent` additions:
+  * Corrected events updates for Firefox
+  * Simplified value setting and allows it to be set dynamically from parent component
+  * Set types for all inputs
+* `FormlessToggleComponent` additions:
+  * Set initial value for checked input to false
+* Completed demo site for all components
 
 # 0.5.0 (2018-06-1)
 
@@ -16,7 +35,7 @@ A lot of work on the demo site and some package updates
   * Small wrap adjustment so it no longer is forced white-space: nowrap.
 * `FormlessRadioComponent` additions:
   * Removed the requirement for a groupValue on updates, this way we can dynamically remove the value from the radio group from the parent component.
-* `FormlessSlideComponent` additions:
+* `FormlessSliderComponent` additions:
   * Changed init, rather than currentValue, to manage the slider value allowing dynamic changes of the slider from the parent component.
 * Completed routes for demo components and finished the home page with sample form.
 
