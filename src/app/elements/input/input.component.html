@@ -1,7 +1,7 @@
 <div class="input" [class.textarea]="textarea" [ngStyle]="optionalStyles">
   <label [class.active]="focused || input">
     {{placeholder}}
-    <span *ngIf="optional">&nbsp;(Optional)</span>
+    <span *ngIf="optional && !hideOptional">&nbsp;(Optional)</span>
   </label>
   <input
     *ngIf="!textarea"

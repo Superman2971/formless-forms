@@ -21,27 +21,17 @@ export class InputDemoComponent {
     default: 'null',
     description: ''
   }, {
-    name: 'dirty',
-    type: 'boolean',
-    default: 'false',
-    description: ''
-  }, {
     name: 'optional',
     type: 'boolean',
     default: 'false',
     description: ''
   }, {
-    name: 'email',
+    name: 'hideOptional',
     type: 'boolean',
     default: 'false',
     description: ''
   }, {
-    name: 'hiddenType',
-    type: 'boolean',
-    default: 'false',
-    description: ''
-  }, {
-    name: 'numberType',
+    name: 'dirty',
     type: 'boolean',
     default: 'false',
     description: ''
@@ -56,14 +46,34 @@ export class InputDemoComponent {
     default: '200',
     description: ''
   }, {
+    name: 'disabled',
+    type: 'boolean',
+    default: 'false',
+    description: ''
+  }, {
     name: 'description',
     type: 'string',
     default: 'null',
     description: ''
   }, {
-    name: 'disabled',
+    name: 'numberType',
     type: 'boolean',
     default: 'false',
+    description: ''
+  }, {
+    name: 'email',
+    type: 'boolean',
+    default: 'false',
+    description: ''
+  }, {
+    name: 'hiddenType',
+    type: 'boolean',
+    default: 'false',
+    description: ''
+  }, {
+    name: 'matchThis',
+    type: 'string',
+    default: 'null',
     description: ''
   }, {
     name: 'textarea',
@@ -76,7 +86,12 @@ export class InputDemoComponent {
     default: 'null',
     description: ''
   }, {
-    name: 'matchThis',
+    name: 'optionalStyles',
+    type: 'string',
+    default: 'null',
+    description: ''
+  }, {
+    name: 'inputStyles',
     type: 'string',
     default: 'null',
     description: ''
@@ -87,16 +102,6 @@ export class InputDemoComponent {
     description: ''
   }, {
     name: 'regexMessage',
-    type: 'string',
-    default: 'null',
-    description: ''
-  }, {
-    name: 'optionalStyles',
-    type: 'string',
-    default: 'null',
-    description: ''
-  }, {
-    name: 'inputStyles',
     type: 'string',
     default: 'null',
     description: ''

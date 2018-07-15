@@ -14,6 +14,8 @@ Completed the demo site, browser compatibility of the components, and small adju
 * `FormlessInputComponent` additions:
   * Custom styles for the input and 'optional' text
   * Set types for all inputs
+  * Switched numberType input back to 'number' instead of 'tel'
+  * added hideOptional input since we don't always want the optional tag showing
 * `FormlessRadioComponent` additions:
   * Added min-height and min-width to ensure the radio size does not squish.
   * Removed unecessary value checking on changes

@@ -53,3 +53,8 @@ We are still in the early development of this library and there are many conside
 * Additional components to consider such as dropdown, searchbar, modals, and much much more
 * Adding accessibility to all components
 * Testing and completing backwards compatibility for old browsers
+* Possible: add phone formatting for input component
+* Create dropdown component
+  * allow ability to include a search/filter of the dropdown as the top row
+  * add use of arrows/enter to select from dropdown
+  * maybe use focus or otherwise when tab selected to open the dropdown (for greater accessibility)

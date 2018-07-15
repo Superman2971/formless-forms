@@ -10,6 +10,7 @@ export class FormlessInputComponent implements OnInit, OnChanges {
   @Input() init: string;
   @Input() dirty: boolean = false;
   @Input() optional: boolean = false;
+  @Input() hideOptional: boolean = false;
   @Input() email: boolean = false;
   @Input() hiddenType: boolean = false;
   @Input() numberType: boolean = false;
@@ -91,7 +92,7 @@ export class FormlessInputComponent implements OnInit, OnChanges {
     if (this.hiddenType) {
       this.type = 'password';
     } else if (this.numberType) {
-      this.type = 'tel';
+      this.type = 'number';
     } else {
       this.type = 'text';
     }
