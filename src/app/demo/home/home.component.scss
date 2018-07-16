@@ -27,4 +27,14 @@
   .pad-bottom {
     padding: 0 0 24px;
   }
+
+  .solution {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.7s ease-in-out;
+
+    &.show {
+      max-height: 300px;
+    }
+  }
 }

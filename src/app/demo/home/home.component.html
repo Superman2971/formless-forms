@@ -93,6 +93,17 @@
         <formless-button text="Submit" color="#ffa000" (click)="submit();"></formless-button>
       </div>
     </formless-card>
+    <div class="solution" [class.show]="dirty">
+      <div class="title">Form Results</div>
+      <formless-card>
+        <div>Name: {{ form.name }}</div>
+        <div>Email: {{ form.email }}</div>
+        <div>Score: {{ form.score }}</div>
+        <div>Human: {{ form.human }}</div>
+        <div>Gender: {{ form.gender }}</div>
+        <div>Accepted Terms: {{ form.acceptedTerms }}</div>
+      </formless-card>
+    </div>
     <div style="margin: 24px 0 0;"></div>
     <formless-card>
       <formless-markdown-display [tabs]="homeForm" [startClosed]="true"></formless-markdown-display>
