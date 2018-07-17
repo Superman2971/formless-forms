@@ -11,14 +11,14 @@
   <div class="main">
     <!-- MENU BAR -->
     <div class="menu" [class.open]="openMenu">
-      <a class="title" style="padding: 19px 0;" routerLink="/components">Components</a>
-      <a routerLink="/button">Button</a>
-      <a routerLink="/card">Card</a>
-      <a routerLink="/checkbox">Checkbox</a>
-      <a routerLink="/input">Input</a>
-      <a routerLink="/radio">Radio</a>
-      <a routerLink="/slider">Slider</a>
-      <a routerLink="/toggle">Toggle</a>
+      <a class="title" style="padding: 19px 0;" (click)="openMenu = !openMenu" routerLink="/components">Components</a>
+      <a (click)="openMenu = !openMenu" routerLink="/button">Button</a>
+      <a (click)="openMenu = !openMenu" routerLink="/card">Card</a>
+      <a (click)="openMenu = !openMenu" routerLink="/checkbox">Checkbox</a>
+      <a (click)="openMenu = !openMenu" routerLink="/input">Input</a>
+      <a (click)="openMenu = !openMenu" routerLink="/radio">Radio</a>
+      <a (click)="openMenu = !openMenu" routerLink="/slider">Slider</a>
+      <a (click)="openMenu = !openMenu" routerLink="/toggle">Toggle</a>
     </div>
     <!-- SCROLLABLE PAGE -->
     <div class="page">

@@ -2,54 +2,102 @@
   <div id="input" class="heading">Input</div>
   <formless-card>
     <div class="title">Standard Input</div>
-    <div>Placeholder, Value(event), init, optional, hideOptional, dirty</div>
     <div style="margin: 24px 0 0;"></div>
-    <formless-input [placeholder]="'Standard'" (value)="standard=$event"></formless-input>
-    <formless-input [placeholder]="'Init Input'" [init]="'Initalized'" (value)="init=$event"></formless-input>
-    <formless-input [placeholder]="'No Validation Required'" [optional]="true" (value)="optional=$event"></formless-input>
-    <formless-input [placeholder]="'Optional Field'" [optional]="true"  [hideOptional]="true" [dirty]="true" (value)="optional2=$event"></formless-input>
-    <formless-input [placeholder]="'Dynamically Dirty'" [dirty]="true" (value)="dirty=$event"></formless-input>
+    <div>
+      <formless-input [placeholder]="'placeholder'" (value)="placeholder=$event"></formless-input>
+      <formless-input [placeholder]="'init'" [init]="'Initalized Text'" (value)="init=$event"></formless-input>
+      <formless-input [placeholder]="'optional'" [optional]="true" (value)="optional=$event"></formless-input>
+      <formless-input [placeholder]="'hideOptional'" [optional]="true"  [hideOptional]="true" (value)="hideOptional=$event"></formless-input>
+      <formless-input [placeholder]="'dirty'" [dirty]="true" (value)="dirty=$event"></formless-input>
+      <formless-input [placeholder]="'value'" (value)="value=$event"></formless-input>
+      <formless-card>Value Input Results: {{ value }}</formless-card>
+    </div>
     <div style="margin: 24px 0 0;"></div>
     <div class="title">Basic Input Validations</div>
-    <div>minlength, maxlength, disabled, description</div>
     <div style="margin: 24px 0 0;"></div>
-    <formless-input [placeholder]="'minlength'" [minlength]="4" (value)="minlength=$event"></formless-input>
-    <formless-input [placeholder]="'maxlength'" [maxlength]="10" (value)="maxlength=$event"></formless-input>
-    <formless-input [placeholder]="'disabled'" [disabled]="true" (value)="disabled=$event"></formless-input>
-    <formless-input [placeholder]="'description'" [description]="'description is added here'" (value)="description=$event"></formless-input>
+    <div>
+      <formless-input [placeholder]="'minlength'" [minlength]="4" (value)="minlength=$event"></formless-input>
+      <formless-input [placeholder]="'maxlength'" [maxlength]="10" (value)="maxlength=$event"></formless-input>
+      <formless-input [placeholder]="'disabled'" [disabled]="true" (value)="disabled=$event"></formless-input>
+      <formless-input [placeholder]="'description'" [description]="'description is displayed here'" (value)="description=$event"></formless-input>
+    </div>
     <div style="margin: 24px 0 0;"></div>
     <div class="title">Typed Input</div>
-    <div>numberType, email, hiddenType, matchThis</div>
     <div style="margin: 24px 0 0;"></div>
-    <formless-input [placeholder]="'Number Type'" [numberType]="true" (value)="number=$event"></formless-input>
-    <formless-input [placeholder]="'Email Address'" email="true" (value)="email=$event"></formless-input>
-    <formless-input [placeholder]="'Password'" hiddenType="true" (value)="password=$event"></formless-input>
-    <formless-input [placeholder]="'Type Password Again'" [matchThis]="password" (value)="passwordMatch=$event"></formless-input>
+    <div>
+      <formless-input [placeholder]="'numberType'" [numberType]="true" (value)="numberType=$event"></formless-input>
+      <formless-input [placeholder]="'email'" email="true" (value)="email=$event"></formless-input>
+      <formless-input [placeholder]="'hiddenType'" hiddenType="true" (value)="hiddenType=$event"></formless-input>
+      <formless-input [placeholder]="'matchThis (match hiddenType)'" [matchThis]="hiddenType" (value)="matchThis=$event"></formless-input>
+    </div>
     <div style="margin: 24px 0 0;"></div>
     <div class="title">Text Area Input</div>
-    <div>textarea, rows</div>
     <div style="margin: 24px 0 0;"></div>
-    <formless-input [placeholder]="'Text Area 1'" [textarea]="true" (value)="text=$event"></formless-input>
-    <formless-input [init]="'Text Area 2'" [optional]="true"  [hideOptional]="true" [textarea]="true" [rows]="7" (value)="moretext=$event"></formless-input>
+    <div>
+      <formless-input [placeholder]="'textarea'" [textarea]="true" (value)="textarea=$event"></formless-input>
+      <formless-input [placeholder]="'rows'" [textarea]="true" [rows]="7" (value)="rows=$event"></formless-input>
+    </div>
     <div style="margin: 24px 0 0;"></div>
     <div class="title">Custom Styles and Regex Validation</div>
-    <div>regex, regexMessage, optionalStyles, inputStyles</div>
     <div style="margin: 24px 0 0;"></div>
-    <formless-input
-      [init]="'Custom Styled Input'"
-      [optionalStyles]="{'min-height': 0}"
-      [inputStyles]="{'border': '1px solid #D5DAE5',	'border-radius': '2px', 'font-size': '12px',	'font-weight': '500', 'height': '36px', 'margin': 0, 'padding': '0 0 0 16px'}"
-    ></formless-input>
-    <formless-input
-      [placeholder]="'Phone Custom Regex'"
-      regex="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
-      regexMessage="*Does not match the pattern for a phone number"
-      (value)="phone=$event"
-    ></formless-input>
+    <div>
+      <formless-input
+        [placeholder]="'regex and regexMessage (phone regex)'"
+        regex="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+        regexMessage="*Does not match the pattern for a phone number"
+        (value)="regex=$event"
+      ></formless-input>
+      <div>optionalStyles and inputStyles</div>
+      <formless-input
+        [optionalStyles]="{'min-height': 0}"
+        [inputStyles]="{'border': '1px solid #D5DAE5', 'border-radius': '2px', 'font-size': '12px',	'font-weight': '500', 'height': '36px', 'margin': 0, 'padding': '0 0 0 16px'}"
+        (value)="custom=$event"
+      ></formless-input>
+    </div>
     <div style="margin: 24px 0 0;"></div>
-    <div class="title">ANSWERS</div>
+    <!-- <div class="title">INPUT FIELD RESULTS</div>
     <div style="margin: 24px 0 0;"></div>
-    <div>Input Results: {{name}} {{email}} {{email2}} {{text}} {{moretext}} {{phone}}</div>
+    <formless-card>
+      <div class="row">
+        <div>placeholder: {{ placeholder }}</div>
+        <div>init: {{ init }}</div>
+        <div>optional: {{ optional }}</div>
+        <div>hideOptional: {{ hideOptional }}</div>
+        <div>dirty: {{ dirty }}</div>
+      </div>
+    </formless-card>
+    <div style="margin: 24px 0 0;"></div>
+    <formless-card>
+      <div class="row">
+        <div>minlength: {{ minlength }}</div>
+        <div>maxlength: {{ maxlength }}</div>
+        <div>disabled: {{ disabled }}</div>
+        <div>description: {{ description }}</div>
+      </div>
+    </formless-card>
+    <div style="margin: 24px 0 0;"></div>
+    <formless-card>
+      <div class="row">
+        <div>numberType: {{ numberType }}</div>
+        <div>email: {{ email }}</div>
+        <div>hiddenType: {{ hiddenType }}</div>
+        <div>matchThis: {{ matchThis }}</div>
+      </div>
+    </formless-card>
+    <div style="margin: 24px 0 0;"></div>
+    <formless-card>
+      <div class="row">
+        <div>textarea: {{ textarea }}</div>
+        <div>rows: {{ rows }}</div>
+      </div>
+    </formless-card>
+    <div style="margin: 24px 0 0;"></div>
+    <formless-card>
+      <div class="row">
+        <div>regex: {{ regex }}</div>
+        <div>custom: {{ custom }}</div>
+      </div>
+    </formless-card> -->
   </formless-card>
   <div style="margin: 24px 0 0;"></div>
   <formless-card>
