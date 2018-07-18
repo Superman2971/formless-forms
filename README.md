@@ -7,11 +7,11 @@
 
 ## About
 
-Formless Forms are a small Angular components library with the objective of providing components that can be combined in any fashion to create dynamic forms with validation that do not require html template forms. Formless Forms are flexible, dynamic, and extendable across frameworks / applications.
+Formless Forms are a small Angular components library with the objective of providing components that can be combined in any fashion to create dynamic forms with validation that do not require html template forms. Formless Forms are flexible, dynamic, and easy to implement.
 
 ## Demo
 
-A [demo site showing formless-form elements](http://formless-forms.bitballoon.com/) in action is still in progress, but will show the component base design, dynamic inputs, custom styling, and best practice for usage.
+[Demo Site](http://formless-forms.bitballoon.com/): includes installation instructions, individual component demos with sample code and property definitions for the APIs.
 
 ## Usage Example
 
