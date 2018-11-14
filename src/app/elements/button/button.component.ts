@@ -9,6 +9,7 @@ export class FormlessButtonComponent {
   @Input() text: string;
   @Input() disabled: boolean = false;
   @Input() color: string;
+  @Input() height: number;
   @Input() inverse: boolean = false;
 
   constructor() {}

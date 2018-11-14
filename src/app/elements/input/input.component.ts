@@ -7,6 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChange
 })
 export class FormlessInputComponent implements OnInit, OnChanges {
   @Input() placeholder: string;
+  @Input() name: string;
   @Input() init: string;
   @Input() dirty: boolean = false;
   @Input() optional: boolean = false;

@@ -31,6 +31,11 @@ export class ButtonDemoComponent {
     default: 'false',
     description: 'When true button events are disabled.'
   }, {
+    name: 'height',
+    type: 'number',
+    default: '36',
+    description: 'Optionally set height of your button.'
+  }, {
     name: 'inverse',
     type: 'boolean',
     default: 'false',

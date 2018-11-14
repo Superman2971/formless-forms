@@ -16,6 +16,11 @@ export class InputDemoComponent {
     default: 'null',
     description: 'Optionally provide the placeholder which will be used as the label for your input.'
   }, {
+    name: 'name',
+    type: 'string',
+    default: 'null',
+    description: 'Optionally provide the name which is used by browsers for autocomplete.'
+  }, {
     name: 'init',
     type: 'string',
     default: 'null',

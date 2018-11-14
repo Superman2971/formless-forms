@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-# 1.0.0 (2018-07-??)
+# 1.0.1 (2018-11-5)
+
+Small additions for form autocomplete on inputs and height on buttons
+
+* `FormlessInputComponent` additions:
+  * Added name property for browser autocomplete
+* `FormlessButtonComponent` additions:
+  * Added height property for customization
+
+# 1.0.0 (2018-07-18)
 
 Completed the demo site, browser compatibility of the components, and small adjustments to component properties.
 
