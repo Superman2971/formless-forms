@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# 1.0.2 (2018-11-30)
+
+Change ViewEncapsulation for formless button so styles can be access from global styles
+
+* `FormlessButtonComponent` additions:
+  * Changed ViewEncapsulation to None
+
 # 1.0.1 (2018-11-5)
 
 Small additions for form autocomplete on inputs and height on buttons

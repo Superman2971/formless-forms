@@ -46,7 +46,17 @@ All components are available in separate modules so that you can load only what 
   * Checkbox Component - from `FormlessCheckboxModule`
   * Radio Component - from `FormlessRadioModule`
 
-### TO DO
+## Deployment
+
+Steps required for new update to the npm pacakge
+
+* *Update:* make appropriate changes/additions to the package elements
+* *ChangeLog:* add/log your changes with the `CHANGELOG.md` and be sure to update the `package.json` version
+* *Demo:* consider the updates required for the demo site to ensure it is up to date, if necessary you will also need to `ng build --prod` and then push to build to the [formless-forms netlify](http://formless-forms.netlify.com/) account.
+* *Save:* `git add .`, `git commit -m` with message specifying the changes, `git push origin master`
+* *Deploy to NPM:* `npm run packagr`, then make sure you are logged into your NPM and run `npm publish dist`
+
+## TO DO
 
 We are still in the early development of this library and there are many considerations to take into account.
 
