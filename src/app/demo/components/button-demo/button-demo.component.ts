@@ -31,15 +31,15 @@ export class ButtonDemoComponent {
     default: 'false',
     description: 'When true button events are disabled.'
   }, {
-    name: 'height',
-    type: 'number',
-    default: '36',
-    description: 'Optionally set height of your button.'
-  }, {
     name: 'inverse',
     type: 'boolean',
     default: 'false',
     description: 'When true button background and text color will inverse.'
+  }, {
+    name: 'inputStyles',
+    type: 'string',
+    default: 'null',
+    description: 'Optionally may provide styles directly to the input element here. Does not work for textarea.'
   }];
 
   constructor() {}

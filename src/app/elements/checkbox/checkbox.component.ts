@@ -6,6 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./checkbox.component.scss']
 })
 export class FormlessCheckboxComponent {
+  @Input() borderColor: string;
   @Input() checked: boolean = false;
   @Input() color: string;
   @Input() size: number = 24;

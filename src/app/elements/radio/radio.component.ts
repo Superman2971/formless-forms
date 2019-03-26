@@ -10,6 +10,7 @@ export class FormlessRadioComponent implements OnChanges {
   @Input() groupValue: any;
   @Input() circle: boolean = false;
   @Input() left: boolean = false;
+  @Input() borderColor: string;
   @Input() color: string = 'rgba(0, 0, 0, 0.87)';
   @Input() size: number = 16;
   @Output() change: EventEmitter<any> = new EventEmitter<any>();

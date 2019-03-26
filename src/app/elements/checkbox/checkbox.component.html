@@ -1,6 +1,6 @@
 <div class="checkbox"
   [style.background]="checked ? color : '#fff'"
-  [style.border-color]="color"
+  [style.border-color]="borderColor ? borderColor : color"
   [style.height.px]="size"
   [style.width.px]="size"
   (click)="onToggle()">

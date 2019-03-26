@@ -6,7 +6,7 @@
   [style.background]="inverse ? (color ? '#fff' : 'rgba(0, 0, 0, 0.54)') : color"
   [style.border-color]="color"
   [style.color]="inverse ? (color ? color : '#fff') : (color ? '#fff' : 'rgba(0, 0, 0, 0.54)')"
-  [style.height]="height">
+  [ngStyle]="inputStyles">
   <ng-content></ng-content>
   <div *ngIf="text" [innerHtml]="text | uppercase"></div>
 </div>

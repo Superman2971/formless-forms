@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# 1.1.0 (2019-03-25)
+
+Property additions.
+
+* `FormlessButtonComponent` additions:
+  * inputStyles added for optional control over styles through property
+* `FormlessCheckboxComponent` additions:
+  * borderColor added for optional selection of the border color
+* `FormlessRadioComponent` additions:
+  * borderColor added for optional selection of the border color
+* `FormlessInputComponent` additions:
+  * Changed verbiage for the email validation
+
 # 1.0.2 (2018-11-30)
 
 Change ViewEncapsulation for formless button so styles can be access from global styles

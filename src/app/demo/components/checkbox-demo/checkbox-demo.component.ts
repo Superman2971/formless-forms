@@ -22,6 +22,11 @@ export class CheckboxDemoComponent {
     default: 'false',
     description: 'When true the checkbox will be checked.'
   }, {
+    name: 'borderColor',
+    type: 'string',
+    default: 'null',
+    description: 'Optionally define a color for the checkbox border color.'
+  }, {
     name: 'color',
     type: 'string',
     default: 'null',

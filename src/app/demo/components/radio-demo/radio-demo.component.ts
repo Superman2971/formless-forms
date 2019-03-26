@@ -57,6 +57,11 @@ export class RadioDemoComponent {
     default: 'rgba(0, 0, 0, 0.87)',
     description: 'Optionally set the color for the radio button.'
   }, {
+    name: 'borderColor',
+    type: 'string',
+    default: 'null',
+    description: 'Optionally set the border color for the radio button.'
+  }, {
     name: 'size',
     type: 'number',
     default: '16',
