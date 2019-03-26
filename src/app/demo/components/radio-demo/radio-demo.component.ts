@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./radio-demo.component.scss']
 })
 export class RadioDemoComponent {
-  radio2 = 'circle';
   radioButtons: Array<any> = [{
     value: {test: 'object'},
     text: 'Object'
@@ -72,6 +71,9 @@ export class RadioDemoComponent {
     default: '-',
     description: 'When radio is clicked the component will emit an event.'
   }];
+  radio1;
+  radio2 = 'circle';
+  radio3;
 
   constructor() {}
 }

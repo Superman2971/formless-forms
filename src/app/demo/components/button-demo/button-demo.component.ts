@@ -41,6 +41,9 @@ export class ButtonDemoComponent {
     default: 'null',
     description: 'Optionally may provide styles directly to the input element here. Does not work for textarea.'
   }];
+  disabled: boolean = false;
+  inverse: boolean = false;
+  text: string;
 
   constructor() {}
 

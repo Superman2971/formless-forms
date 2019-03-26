@@ -8,5 +8,7 @@ declare var require: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  openMenu: boolean = false;
+
   constructor() {}
 }

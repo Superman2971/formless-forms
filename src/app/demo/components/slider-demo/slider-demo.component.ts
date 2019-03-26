@@ -51,6 +51,8 @@ export class SliderDemoComponent {
     default: '-',
     description: 'When slider changes the component will emit an event. The event is a number.'
   }];
+  slider1;
+  slider2;
 
   constructor() {}
 }

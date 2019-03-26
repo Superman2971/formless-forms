@@ -117,6 +117,24 @@ export class InputDemoComponent {
     default: '-',
     description: 'When input is updated it will emit an event. Event type is a string.'
   }];
+  value: any;
+  hiddenType: boolean = false;
+  placeholder: string;
+  init: string;
+  optional: any;
+  hideOptional: any;
+  dirty: boolean = false;
+  minlength;
+  maxlength;
+  disabled;
+  description;
+  numberType;
+  email;
+  matchThis;
+  textarea;
+  rows;
+  regex;
+  custom;
 
   constructor() {}
 }
