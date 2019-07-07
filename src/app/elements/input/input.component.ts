@@ -118,7 +118,6 @@ export class FormlessInputComponent implements OnInit, OnChanges {
         if (!this.customRegexValid) {
           valid = false;
         }
-        console.log(this.customRegex, this.customRegexValid);
       }
       // minlength validation
       if (this.minlength && value.length < this.minlength) {
